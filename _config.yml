@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Your Name / Site Title"
+title                    : "Alexandra Chronopoulou"
 title_separator          : "-"
 name                     : &name "Alexandra Chronopoulou"
 description              : &description "PhD student in Neural Machine Translation, LMU Munich"
