@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Alexandra Chronopoulou"
-  avatar           : "images/profile.jpg"
+  avatar           : "profile.png"
   bio              : "PhD student in Neural Machine Translation, LMU Munich"
   location         : "Munich, Germany"
   employer         :
