@@ -2,7 +2,7 @@
 title: "NTUA-SLP at SemEval-2018 Task 1: Predicting Affective Content in Tweets with Deep Attentive RNNs and Transfer Learning"
 collection: publications
 permalink: /publication/semeval2018
-date: 2018
+date: 2018-01-01
 venue: 'In Proceedings of The 12th International Workshop on Semantic Evaluation (SemEval
 2018)'
 paperurl: 'https://www.aclweb.org/anthology/S18-1037'
