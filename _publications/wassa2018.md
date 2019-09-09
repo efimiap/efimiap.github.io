@@ -7,6 +7,6 @@ venue: 'In Proceedings of the 9th Workshop on Computational Approaches to Subjec
 (WASSA 2018)'
 paperurl: 'https://www.aclweb.org/anthology/W18-6209/'
 
-citation: 'Alexandra Chronopoulou, Aikaterini Margatina, Christos Baziotis,
+citation: '**Alexandra Chronopoulou**, Aikaterini Margatina, Christos Baziotis,
 Alexandros Potamianos. (2018). 2(3).'
 ---
