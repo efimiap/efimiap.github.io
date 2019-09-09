@@ -3,9 +3,9 @@ layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
-redirect_from: 
-  - /files/CV.pdf
+
 ---
 ---
+Here you can find my not-entirely-up-to-date [Curriculum Vitae](/files/CV.pdf)
 
 
