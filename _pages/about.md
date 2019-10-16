@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Alexandra Chronopoulou"
+title: "Pinelopi (Nelly) Papalampidi"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-I am a first-year PhD student at the [Center for Information and Language Processing](https://www.cis.uni-muenchen.de/) at [LMU Munich](https://www.en.uni-muenchen.de/index.html) under the supervision of Prof. [Alex Fraser](https://www.cis.uni-muenchen.de/~fraser/). I'm working on multilingual Machine Translation. 
+I am a second-year PhD student at the [School of Informatics, University of Edinburgh](https://www.ed.ac.uk/informatics/) and member of [EdinburghNLP](https://edinburghnlp.inf.ed.ac.uk/). I am co-supervised by [Mirella Lapata](http://homepages.inf.ed.ac.uk/mlap/index.php) and [Frank Keller](http://homepages.inf.ed.ac.uk/keller/). I am interested in addressing tasks like summarization and question-answering in the context of narratives by exploiting the underlying narrative structure. I am also interested in investigating such topics in multi-modal settings and exploring fusion methods among modalities.
 
-Before that, I completed my diploma (combined BEng and MEng) at the [National Technical University of Athens](https://www.ntua.gr/en/) in Athens, Greece, department of [Electrical and Computer Engineering](https://www.ece.ntua.gr/en). In my thesis, I explored Transfer Learning with Language Modeling for several classification tasks, most notably on emotion recognition, under the supervision of Prof. [Alex Potamianos](https://scholar.google.com/citations?user=pBQViyUAAAAJ&hl=en). 
+Before that, I completed my diploma (combined BEng and MEng) at the [National Technical University of Athens](https://www.ntua.gr/en/) in Athens, Greece, department of [Electrical and Computer Engineering](https://www.ece.ntua.gr/en). In my thesis, I addressed the task of Dialogue Act Classification and explored ways in order to incorporate speakers' intentions and emotions in personality identification, under the supervision of Prof. [Alex Potamianos](https://scholar.google.com/citations?user=pBQViyUAAAAJ&hl=en). 
 
