@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Alexandra Chronopoulou"
+title                    : "Pinelopi Papalampidi"
 title_separator          : "-"
-name                     : &name "Alexandra Chronopoulou"
-description              : &description "PhD student in Neural Machine Translation, LMU Munich"
-url                      : https://alexandra-chron.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Pinelopi Papalampidi"
+description              : &description "PhD student in School of Informatics, University of Edinburgh"
+url                      : https://ppapalampidi.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "alexandra-chron.github.io"
+repository               : "ppapalampidi.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -80,13 +80,13 @@ analytics:
 
 # Site Author
 author:
-  name             : "Alexandra Chronopoulou"
+  name             : "Pinelopi Papalampidi"
   avatar           : "profile.png"
-  bio              : "PhD student in Neural Machine Translation, LMU Munich"
-  location         : "Munich, Germany"
+  bio              : "PhD student in School of Informatics, University of Edinburgh"
+  location         : "Edinburgh, UK"
   employer         :
-  googlescholar    : "http://scholar.google.com/citations?user=XiwRCRIAAAAJ&hl=en"
-  email            : "achron at cis.lmu.de"
+  googlescholar    : 
+  email            : "ppapalampidi at ed.ac.uk"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -95,7 +95,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "alexandra-chron"
+  github           : "ppapalampidi"
   google_plus      :
   keybase          :
   instagram        :
@@ -107,7 +107,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "alexandraxron"
+  twitter          : "pinelopip3"
   vine             :
   weibo            :
   xing             :
