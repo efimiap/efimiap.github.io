@@ -20,11 +20,15 @@ Given a screenplay, which is naturally segmented into scenes, the objective is t
 
 ## General summarization algorithms
 
-**Unsupervised**: _TextRank_ is one of the most well-known and used unsupervised summarization algorithms. The core idea is that you have units (most commonly phrases or sentences but in our case that would be scenes, i.e., small documents). You compute the pairwise textual similarity between those units and create a densely connected graph, where the nodes are the textual units and the edges are the similarity measure. Finally, you calculate the centrality of each such unit (i.e., how densely connected it is with all other nodes in the graph) and you select the N most central ones as your summary. The hypothesis for this selection is that the units that present high similarity with a lot of nodes and especially with other central ones are important enough to be included in the summary.
+**Unsupervised: _TextRank_** 
 
-**Supervised**: In a supervised scenario, we assume that binary labels are given denoting the scenes that belong to the summary. In this case, standard summarization algorithms select the desired subsequence of scenes based on standard criteria: content, salience (i.e., similarity with a document encoding), position and novelty (i.e., dissimilarity with previous selected units). 
+_TextRank_ is one of the most well-known and used unsupervised summarization algorithms. The core idea is that you have units (most commonly phrases or sentences but in our case that would be scenes, i.e., small documents). You compute the pairwise textual similarity between those units and create a densely connected graph, where the nodes are the textual units and the edges are the similarity measure. Finally, you calculate the centrality of each such unit (i.e., how densely connected it is with all other nodes in the graph) and you select the N most central ones as your summary. The hypothesis for this selection is that the units that present high similarity with a lot of nodes and especially with other central ones are important enough to be included in the summary.
 
-**Our approach: SUMMER**:
+**Supervised: SummaSuNNeR**
+
+In a supervised scenario, we assume that binary labels are given denoting the scenes that belong to the summary. In this case, standard summarization algorithms select the desired subsequence of scenes based on standard criteria: content, salience (i.e., similarity with a document encoding), position and novelty (i.e., dissimilarity with previous selected units). 
+
+**Our approach: SUMMER**
 
 ![High Level](master/_posts/Images/Images/highlevel_diff-crop.pdf)
 
