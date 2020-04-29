@@ -15,7 +15,7 @@ Given a screenplay, which is naturally segmented into scenes, the objective is t
 **Input**: screenplay as a sequence of scenes each of which has description parts (i.e., what the camera sees) and dialogue parts between the characters.
 
 <p align="center">
-  <img src="/master/_posts/Images/wpb9fac2df_1a.png" height="500">
+  <img src="./Images/wpb9fac2df_1a.png" height="500">
 </p>
 
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the respective videos for the selected scenes.
@@ -30,12 +30,12 @@ _TextRank_ is one of the most well-known and used unsupervised summarization alg
 
 In a supervised scenario, we assume that binary labels are given denoting the scenes that belong to the summary. In this case, standard summarization algorithms select the desired subsequence of scenes based on standard criteria: content, salience (i.e., similarity with a document encoding), position and novelty (i.e., dissimilarity with previous selected units). 
 
-**Our approach: _SUMMER**
+**Our approach: _SUMMER_**
 
 ![High Level]("https://github.com/ppapalampidi/ppapalampidi.github.io/tree/master/_posts/Images/highlevel_diff-crop.pdf")
 
 
-## Incorporating the narrative structure
+## Incorporating the narrative structure into the generic algorithms
 
 
 
