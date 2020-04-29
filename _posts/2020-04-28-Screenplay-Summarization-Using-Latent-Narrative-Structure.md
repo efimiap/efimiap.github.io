@@ -20,6 +20,6 @@ Given a screenplay, which is naturally segmented into scenes, the objective is t
 
 **Unsupervised**: _TextRank_ is one of the most well-known and used unsupervised summarization algorithms. The core idea is that you have units (most commonly phrases or sentences but in our case that would be scenes, i.e., small documents) 
 
-![High Level](https://github.com/ppapalampidi/ppapalampidi.github.io/_posts/Images/highlevel_diff-crop.pdf)
+![High Level](https://github.com/ppapalampidi/ppapalampidi.github.io/blob/master/_posts/Images/highlevel_diff-crop.pdf)
 
 
