@@ -16,9 +16,11 @@ Given a screenplay, which is naturally segmented into scenes, the objective is t
 
 **Output**: subsequence of scenes containing most important events in the story; video summary by merging the respective videos for the selected scenes.
 
-### General summarization algorithms
+## General summarization algorithms
 
-**Unsupervised**: _TextRank_ is one of the most well-known and used unsupervised summarization algorithms. The core idea is that you have units (most commonly phrases or sentences but in our case that would be scenes, i.e., small documents) 
+**Unsupervised**: _TextRank_ is one of the most well-known and used unsupervised summarization algorithms. The core idea is that you have units (most commonly phrases or sentences but in our case that would be scenes, i.e., small documents). You compute the pairwise textual similarity between those units -the similarity could be tf*idf or more recently cosine similarity/dot product between neural representations. Based on the resulting similarity matrix, you can then create a densely connected graph, where the nodes are the textual units (again, in our cases the screenplay scenes) and the edges would be the degree of similarity. Finally, you calculate the centrality of each such unit (i.e., how densely connected it is with all other nodes in the graph) and you select the N most central ones as your summary. The hypothesis for this selection is that the units that present high similarity with a lot of nodes and especially with other central ones are important enough to be included in the summary.
+
+**Supervised**: 
 
 ![High Level](https://github.com/ppapalampidi/ppapalampidi.github.io/blob/master/_posts/Images/highlevel_diff-crop.pdf)
 
