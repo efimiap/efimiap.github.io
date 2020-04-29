@@ -8,7 +8,7 @@ tags:
   - structure
 ---
 
-### Screenplay summarization as scene selection
+## Screenplay summarization as scene selection
 
 Given a screenplay, which is naturally segmented into scenes, the objective is to select an optimal subsequence of scenes that presents the main story -storyline- from beginning to end while omitting all unnecessary details and decreasing drastically the video length.
 
@@ -16,10 +16,10 @@ Given a screenplay, which is naturally segmented into scenes, the objective is t
 
 **Output**: subsequence of scenes containing most important events in the story; video summary by merging the respective videos for the selected scenes.
 
-#### General summarization algorithms
+### General summarization algorithms
 
-**Unsupervised**: __TextRank__ is one of the most well-known and used unsupervised summarization algorithms. The core idea is that you have units (most commonly phrases or sentences but in our case that would be scenes, i.e., small documents) 
+**Unsupervised**: _TextRank_ is one of the most well-known and used unsupervised summarization algorithms. The core idea is that you have units (most commonly phrases or sentences but in our case that would be scenes, i.e., small documents) 
 
-![High Level](src/_posts/Images/highlevel_diff-crop.pdf)
+![High Level](_posts/Images/highlevel_diff-crop.pdf)
 
 
