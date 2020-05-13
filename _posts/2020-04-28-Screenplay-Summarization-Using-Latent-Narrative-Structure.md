@@ -35,7 +35,7 @@ In a supervised scenario, we assume that binary labels are given denoting the sc
 **Our approach: _SUMMER_**
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/highlevel_diff.png" height="100">
+  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/ezgif.com-gif-maker.gif" height="100">
 </p>
 
 ## Incorporating the narrative structure into the generic algorithms
