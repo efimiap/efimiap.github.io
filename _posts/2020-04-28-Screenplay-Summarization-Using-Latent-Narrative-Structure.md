@@ -15,7 +15,7 @@ Given a screenplay, which is naturally segmented into scenes, the objective is t
 **Input**: screenplay as a sequence of scenes each of which has description parts (i.e., what the camera sees) and dialogue parts between the characters.
 
 <p align="center">
-  <img src="https://github.com/ppapalampidi/ppapalampidi.github.io/blob/master/images/wpb9fac2df_1a.png" height="500">
+  <img src="./images/wpb9fac2df_1a.svg" height="500">
 </p>
 
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the respective videos for the selected scenes.
