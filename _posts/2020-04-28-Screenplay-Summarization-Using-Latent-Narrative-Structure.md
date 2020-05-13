@@ -28,7 +28,7 @@ Given a screenplay, which is naturally segmented into scenes $s$, the objective 
 
 **Unsupervised: _TextRank_** 
 
-_TextRank_[1] is a well-known unsupervised summarization algorithm. For _TextRank_, we create a fully-connected graph $G=(V,E)$, where $V$ is the set of nodes and $E$ is the set of edges. The nodes $V$ are the textual units (in our case that would be the scenes) and the edges $E$ are the semantic similarity between two scenes. After creating the graph $G$, we compute the centrality of each scene, i.e., how connected the scene is with the rest of the graph:
+_TextRank_^[1] is a well-known unsupervised summarization algorithm. For _TextRank_, we create a fully-connected graph $G=(V,E)$, where $V$ is the set of nodes and $E$ is the set of edges. The nodes $V$ are the textual units (in our case that would be the scenes) and the edges $E$ are the semantic similarity between two scenes. After creating the graph $G$, we compute the centrality of each scene, i.e., how connected the scene is with the rest of the graph:
 <p align="center">
 $\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}e_{ij} + \lambda_2  \sum_{j>i}e_{ij}$
 </p>
@@ -49,7 +49,7 @@ In a supervised scenario, we assume that binary labels are given denoting the sc
 
 ## References
 
-[1] Mihalcea, Rada, and Paul Tarau. "Textrank: Bringing order into text." Proceedings of the 2004 conference on empirical methods in natural language processing. 2004.
+^[1] Mihalcea, Rada, and Paul Tarau. "Textrank: Bringing order into text." Proceedings of the 2004 conference on empirical methods in natural language processing. 2004.
 
 
 
