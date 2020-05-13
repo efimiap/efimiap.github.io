@@ -36,7 +36,7 @@ In a supervised scenario, we assume that binary labels are given denoting the sc
 
 **Our approach: _SUMMER_**
 
-![High Level]("https://github.com/ppapalampidi/ppapalampidi.github.io/blob/master/images/highlevel_diff-crop.pdf")
+![High Level]("https://[your GitHub username].github.io/images/wpb9fac2df_1a.svg")
 
 
 ## Incorporating the narrative structure into the generic algorithms
