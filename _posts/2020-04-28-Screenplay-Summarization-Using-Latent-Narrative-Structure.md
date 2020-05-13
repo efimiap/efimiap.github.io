@@ -19,7 +19,7 @@ Given a screenplay, which is naturally segmented into scenes, the objective is t
 <p align="center">
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" height="500">
 </p>
-
+esefsdfsdfdsfdsds
 ![Screenplay](https://media.enikos.gr/data/photos/resized/720_522312_c022ec628d-b307bad08d161a40.jpg)
 
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the respective videos for the selected scenes.
