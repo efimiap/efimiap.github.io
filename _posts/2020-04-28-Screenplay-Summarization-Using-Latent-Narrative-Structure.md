@@ -17,7 +17,7 @@ Given a screenplay, which is naturally segmented into scenes, the objective is t
 **Input**: screenplay as a sequence of scenes each of which has description parts (i.e., what the camera sees) and dialogue parts between the characters.
 
 <p align="center">
-  <img src="../images/wpb9fac2df_1a.svg" height="500">
+  <img src="/images/wpb9fac2df_1a.svg" height="500">
 </p>
 
 ![Screenplay]("https://github.com/ppapalampidi/ppapalampidi.github.io/blob/master/images/wpb9fac2df_1a.svg")
@@ -36,7 +36,7 @@ In a supervised scenario, we assume that binary labels are given denoting the sc
 
 **Our approach: _SUMMER_**
 
-![High Level]("https://ppapalampidi.github.io/images/wpb9fac2df_1a.svg")
+![High Level]("https://ppapalampidi.github.io/images/wpb9fac2df_1a.png")
 
 
 ## Incorporating the narrative structure into the generic algorithms
