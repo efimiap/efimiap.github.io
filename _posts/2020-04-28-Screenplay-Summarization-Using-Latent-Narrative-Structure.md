@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: archive
 title: 'Screenplay Summarization Using Latent Narrative Structure'
 date: 2020-04-28
 permalink: /posts/2020/08/screenplay-summarization/
