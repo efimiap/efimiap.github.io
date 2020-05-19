@@ -10,6 +10,8 @@ tags:
   - structure
 ---
 
+# Screenplay Summarization Using Latent Narrative Structure
+
 This is a blog post for the paper [*Screenplay Summarization Using Latent Narrative Structure*](https://arxiv.org/pdf/2004.12727.pdf) accepted at ACL 2020.
 
 ## Screenplay summarization as scene selection
@@ -19,7 +21,7 @@ Given a screenplay, which is naturally segmented into $N$ scenes $s$, the object
 **Input**: Screenplay as a sequence of scenes $\mathcal{D}$. Each scene $s$ has description parts (i.e., what the camera sees) and dialogue parts between the characters. E.g.:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" height="20">
+  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" height="10">
 </p>
 
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the respective videos for the selected scenes.
@@ -82,6 +84,9 @@ Previous work [5] demonstrated that such events can be identified in various Hol
 
 Let's see how these events can be applied to an actual CSI episode:
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/csi_example.gif" height="100">
+</p>
 
 
 **Pre-training on TP identification**
