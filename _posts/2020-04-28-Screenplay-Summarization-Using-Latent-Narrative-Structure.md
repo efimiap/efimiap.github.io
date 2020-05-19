@@ -19,7 +19,7 @@ Given a screenplay, which is naturally segmented into $N$ scenes $s$, the object
 **Input**: Screenplay as a sequence of scenes $\mathcal{D}$. Each scene $s$ has description parts (i.e., what the camera sees) and dialogue parts between the characters. E.g.:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" height="30">
+  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" height="20">
 </p>
 
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the respective videos for the selected scenes.
@@ -51,7 +51,7 @@ In a supervised scenario, we assume that binary labels are given denoting the sc
 
 2. salience i.e., similarity with a global document representation
 
-3. position \& novelty, i.e., encoded position in the document and similarity with previous selections 
+3. position & novelty, i.e., encoded position in the document and similarity with previous selections 
 
 **Is general algorithms appropriate for summarizing episodes?**
 
@@ -64,13 +64,44 @@ Hence, we hypothesize that general summarization algorithms cannot be transferre
 
 We aim at exploiting the underlying narrative structure of the CSI episodes for facilitating summarization. 
 
-According to screenwriting theory [4], all films and TV shows independently of their genre have a common skeleton: in order to make a story compelling, 
+According to screenwriting theory [4], all films and TV shows independently of their genre have a common high-level structure. In order for a story to be compelling, certain key events, called turning points (TPs) should be present in specific points of the story. These key events further segment the story into meaningful semantic sections (i.e., acts). 
+
+There are several different schemes in order to describe narrative structure. Here, we use a modern variation of traditional narrative analysis that is used by screenwriters as a practical guide to creating films and TV shows. According to that scheme there are *5 turning points* which segment the narrative into *6 thematic sections*. We are mostly interested in the definition of the turning points:
+
+1. "<span style='color:green'>*TP1* Opportunity: Introductory event to the story occuring right after the presentation of the story setting and some background information about the protagonists.</span>
+
+2. <span style='color:darkgreen'>*TP2* Change of plans: Event where the main goal of the story is revealed. Thereafter the action begins to increase.</span>
+
+3. <span style='color:olive'>*TP3* Point of no return: Event the pushs the protagonist(s) to fully commit to their goal; thereafter there is no return to pre-story state for them.</span>
+
+4. <span style='color:red'>*TP4* Major setback: The biggest obsacle for the protagonist(s); momen that everything falls apart (temporarily or permantently).</span>
+
+5. <span style='color:indianred'> *TP5* Climax: moment of resolution, final event of the story and the ''biggest spoiler'' in a film.
+
+Previous work [5] demonstrated that such events can be identified in various Hollywood movies by both human annotators and automatic approaches. However, is those events truly universal for all types of narratives? We want to apply these rules in a different type of narrative now: a TV show and specifically episodes where crime investigations are conducted.
+
+Let's see how these events can be applied to an actual CSI episode:
+
+
+
+**Pre-training on TP identification**
+
+
+## SUMMER
+
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/ezgif.com-gif-maker.gif" height="100">
 </p>
 
-## Incorporating the narrative structure into the generic algorithms
+**Unsupervised as structure-aware TextRank**
+
+<p align="center">
+$\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}e_{ij} + \lambda_2  \sum_{j>i}e_{ij}$
+</p>
+
+**Supervised via latent structure representations**
+
 
 
 ## References
@@ -82,4 +113,6 @@ According to screenwriting theory [4], all films and TV shows independently of t
 [3] Nallapati, Ramesh, Feifei Zhai, and Bowen Zhou. "Summarunner: A recurrent neural network based sequence model for extractive summarization of documents." Thirty-First AAAI Conference on Artificial Intelligence. 2017.
 
 [4] Michael Hauge. 2017.Storytelling Made Easy:  Per-suade and Transform Your Audiences, Buyers, andClients  –  Simply,  Quickly,  and  Profitably.IndieBooks International.
+
+[5] Papalampidi, Pinelopi, Frank Keller, and Mirella Lapata. "Movie Plot Analysis via Turning Point Identification." Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP). 2019.
 
