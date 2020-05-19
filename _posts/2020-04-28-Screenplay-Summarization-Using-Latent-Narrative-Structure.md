@@ -10,7 +10,7 @@ tags:
   - structure
 ---
 
-This is a blog post for the paper [*Screenplay Summarization Using Latent Narrative Structure*](https://arxiv.org/pdf/2004.12727.pdf) accepted at ACL 2020.
+This is a blog post for our paper [*Screenplay Summarization Using Latent Narrative Structure*](https://arxiv.org/pdf/2004.12727.pdf) accepted at ACL 2020.
 
 ## Screenplay summarization as scene selection
 
@@ -19,7 +19,7 @@ Given a screenplay, which is naturally segmented into $N$ scenes $s$, the object
 **Input**: Screenplay as a sequence of scenes $\mathcal{D}$. Each scene $s$ has description parts (i.e., what the camera sees) and dialogue parts between the characters. E.g.:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" width="350">
+  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" width="450">
 </p>
 
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the respective videos for the selected scenes.
@@ -83,7 +83,7 @@ Previous work [5] demonstrated that such events can be identified in various Hol
 Let's see how these events can be applied to an actual CSI episode:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/csi_example.gif" height="100">
+  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/csi_example.gif" height="60">
 </p>
 
 So, it seems like a good fit for our dataset as well. However, we do not have any information about the narrative structure of the CSI episodes neither can we infer the TPs based on writing conventions (in comparison with news articles). 
@@ -99,7 +99,7 @@ How can we incorporate the knowledge about the narrative structure --via the pre
 The general idea is this:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/ezgif.com-gif-maker.gif" height="100">
+  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/ezgif.com-gif-maker.gif" height="70">
 </p>
 
 So, given the screenplay segmented into scenes, we first identify the scenes that act as TPs. Then, we decide which scenes to include to the summary based on their relationship with these key events. Finally, we have a video summary by combining the selected scenes.
@@ -117,8 +117,10 @@ Intuitively, the $f_j$ term in the first part of the equation (i.e., forward sum
 
 **Supervised via latent structure representations**
 
+In the supervised version of SUMMER we again select scenes for the summary based on similar criteria as SummaRuNNeR. However, we define the salience of a scene differently from before: instead of naively computed a global screenplay representation as a weighted average of all scene representation --it is unclear what a global representation stands for-- we explictly use the latent narrative structure in order to define the salience of a scene in the screenplay.
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/summer.gif" height="100">
+  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/summer.gif" height="150">
 </p>
 
 
