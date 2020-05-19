@@ -25,7 +25,7 @@ Given a screenplay, which is naturally segmented into $N$ scenes $s$, the object
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the respective videos for the selected scenes.
 
 <p align="center">
-<video controls="" height="200" ><source src="https://s3.eu-west-2.amazonaws.com/csivideosummaries/SUMMER/csi_final.webm" type="video/mp4" /> Your browser does not support the video tag.</video>
+<video controls="" height="300" ><source src="https://s3.eu-west-2.amazonaws.com/csivideosummaries/SUMMER/csi_final.webm" type="video/mp4" /> Your browser does not support the video tag.</video>
 </p>
 
 ## General summarization algorithms
