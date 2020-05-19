@@ -21,7 +21,7 @@ Given a screenplay, which is naturally segmented into $N$ scenes $s$, the object
 **Input**: Screenplay as a sequence of scenes $\mathcal{D}$. Each scene $s$ has description parts (i.e., what the camera sees) and dialogue parts between the characters. E.g.:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" height="10">
+  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" width="10">
 </p>
 
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the respective videos for the selected scenes.
@@ -62,7 +62,7 @@ No! TV episodes and narratives in general present significantly different struct
 Hence, we hypothesize that general summarization algorithms cannot be transferred directly from clean, straightforward articles to messy, complex and entangled stories, such as TV episodes.
 
 
-**Our solution: Narrative Structure**
+**Our solution: Narrative structure**
 
 We aim at exploiting the underlying narrative structure of the CSI episodes for facilitating summarization. 
 
@@ -70,15 +70,15 @@ According to screenwriting theory [4], all films and TV shows independently of t
 
 There are several different schemes in order to describe narrative structure. Here, we use a modern variation of traditional narrative analysis that is used by screenwriters as a practical guide to creating films and TV shows. According to that scheme there are *5 turning points* which segment the narrative into *6 thematic sections*. We are mostly interested in the definition of the turning points:
 
-1. "<span style='color:green'>*TP1* Opportunity: Introductory event to the story occuring right after the presentation of the story setting and some background information about the protagonists.</span>
+<span style='color:green'>*TP1* Opportunity: Introductory event to the story occuring right after the presentation of the story setting and some background information about the protagonists.</span>
 
-2. <span style='color:darkgreen'>*TP2* Change of plans: Event where the main goal of the story is revealed. Thereafter the action begins to increase.</span>
+<span style='color:darkgreen'>*TP2* Change of plans: Event where the main goal of the story is revealed. Thereafter the action begins to increase.</span>
 
-3. <span style='color:olive'>*TP3* Point of no return: Event the pushs the protagonist(s) to fully commit to their goal; thereafter there is no return to pre-story state for them.</span>
+<span style='color:olive'>*TP3* Point of no return: Event the pushs the protagonist(s) to fully commit to their goal; thereafter there is no return to pre-story state for them.</span>
 
-4. <span style='color:red'>*TP4* Major setback: The biggest obsacle for the protagonist(s); momen that everything falls apart (temporarily or permantently).</span>
+<span style='color:red'>*TP4* Major setback: The biggest obsacle for the protagonist(s); momen that everything falls apart (temporarily or permantently).</span>
 
-5. <span style='color:indianred'> *TP5* Climax: moment of resolution, final event of the story and the ''biggest spoiler'' in a film.
+<span style='color:indianred'> *TP5* Climax: moment of resolution, final event of the story and the ''biggest spoiler'' in a film.
 
 Previous work [5] demonstrated that such events can be identified in various Hollywood movies by both human annotators and automatic approaches. However, is those events truly universal for all types of narratives? We want to apply these rules in a different type of narrative now: a TV show and specifically episodes where crime investigations are conducted.
 
@@ -88,22 +88,34 @@ Let's see how these events can be applied to an actual CSI episode:
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/csi_example.gif" height="100">
 </p>
 
+So, it seems like a good fit for our dataset as well. However, we do not have any information about the narrative structure of the CSI episodes neither can we infer the TPs based on writing conventions (in comparison with news articles). 
 
 **Pre-training on TP identification**
 
+For this reason we use the TRIPOD dataset containing movie screenplays and annotated TP events in order to pre-train a TP identification network. We use the same architecture as in [5], but we simplify the network to only consider screenplay scenes --we exclude the plot synopsis information-- and predict the scenes that act as TP events. For each of the five TPs, the network outputs a probability for each screenplay scene to represent the given event. 
 
 ## SUMMER
 
+How can we incorporate the knowledge about the narrative structure --via the pre-trained TP identification network-- into the general summarization algorithms presented above?
+
+The general idea is this:
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/ezgif.com-gif-maker.gif" height="100">
 </p>
 
+So, given the screenplay segmented into scenes, we first identify the scenes that act as TPs. Then, we decide which scenes to include to the summary based on their relationship with these key events. Finally, we have a video summary by combining the selected scenes.
+
 **Unsupervised as structure-aware TextRank**
 
+First, we consider our unsupervised method: TextRank. For each screenplay scene $s_i$ we compute a score $f_i$ that represents the maximum probability that the scene acts as any TP event. Then, we incorporate these scores in the centrality calculation of the scene as follows:
+
 <p align="center">
-$\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}e_{ij} + \lambda_2  \sum_{j>i}e_{ij}$
+$\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}(e_{ij} + f_j) + \lambda_2  \sum_{j>i}(e_{ij} + f_i)$
 </p>
+
+Intuitively, the $f_j$ term in the first part of the equation (i.e., forward sum) increases increamentally the centrality scores assigned to scenes as the story moves on and we go to later sections of the narrative. The $f_i$ term in the second part of the equation (i.e., backward sum) increases the scores of the scenes that act as TPs.
+
 
 **Supervised via latent structure representations**
 
