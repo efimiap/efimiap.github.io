@@ -25,7 +25,7 @@ Given a screenplay, which is naturally segmented into $N$ scenes $s$, the object
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the respective videos for the selected scenes.
 
 <p align="center">
-<video controls="" height="480" width="720"><source src="$https://s3.eu-west-2.amazonaws.com/csivideosummaries/SUMMER" type="video/mp4" /> Your browser does not support the video tag.</video>
+<video controls="" height="200" ><source src="$https://s3.eu-west-2.amazonaws.com/csivideosummaries/SUMMER/csi_final.webm" type="video/mp4" /> Your browser does not support the video tag.</video>
 </p>
 
 ## General summarization algorithms
@@ -53,8 +53,11 @@ No! TV episodes and narratives in general present significantly different struct
 
 Hence, we hypothesize that general summarization algorithms cannot transfer that well from clean, straightforward articles to messy, complex and entangled stories, such as TV episodes.
 
+## SUMMER
 
 **Our solution: Narrative Structure**
+
+We 
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/ezgif.com-gif-maker.gif" height="100">
