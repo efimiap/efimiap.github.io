@@ -30,7 +30,7 @@ Given a screenplay, which is naturally segmented into $N$ scenes $s$, we want to
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the videos of the selected scenes. E.g.:
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" width="450"> &#8594; <video controls="" height="300" ><source src="https://s3.eu-west-2.amazonaws.com/csivideosummaries/SUMMER/csi_final.webm" type="video/mp4" /> Your browser does not support the video tag.</video>
+<img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" width="450"> &#8594; <video controls="" height="300" ><source src="https://s3.eu-west-2.amazonaws.com/csivideosummaries/SUMMER/csi_final.webm" type="video/mp4"  width="450" /> Your browser does not support the video tag.</video>
 </p>
 
 ## General summarization algorithms
