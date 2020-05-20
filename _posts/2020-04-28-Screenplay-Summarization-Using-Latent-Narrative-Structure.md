@@ -123,6 +123,40 @@ In the supervised version of SUMMER we again select scenes for the summary based
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/summer.gif" height="150">
 </p>
 
+So, as shown above we decide about the summary scenes based on each scene's content and relation with the key events (i.e., salience: maximum similarity with TPs).
+
+**Training** We train SUMMER end-to-end using using BCE, i.e. binary cross-entropy loss. However, we also add two extra regularization terms to the loss function in order to control the TP-specific attention distributions used for computing the latent tp representations:
+<p align="center">
+$\mathcal{L} = \textit{BCE} + a O + b F$
+</p>
+
+Orthogonal regularization ($O$): we want to encourage tp representations to capture different information from the screenplay and not diverge to the same point in the episode. For this reason we maximize the Kullback-Leibler (KL) divergence~$\mathcal{D}_{KL}$ between all pairs of TP attention distributions:
+<p align="center">
+$O = \sum_{i \in [1,5]}\sum_{j \in [1,5], j \ne i}\log \frac{1}{\mathcal{D}_{KL}\left(tp_i \middle\| tp_j\right) + \epsilon}$
+</p>
+
+Focal regularization ($F$): we also want to discourage the TP distributions from deviating drastically from the expecting positions for each TP event. The expected positions for TPs are analyzed in screenwriting theory extensively. For this reason the focal loss minimizes the KL divergence between each TP attention distribution and the corresponding expected position distribution:
+<p align="center">
+$F = \sum_{i \in [1,5]}\mathcal{D}_{KL}\left(tp_i \middle\| th_i\right)$
+</p>
+
+##CSI dataset
+
+As mentioned earlier we use the [*CSI dataset*](https://github.com/EdinburghNLP/csi-corpus) for summarization. Our dataset consists of 39 episodes. For each episode we have gold-standard scene-level binary annotations indicating whether the scene belongs to the summary. Moreover, for each summary scene we have further information about what aspect(s) of the summary the scene refers to. We consider 6 different aspects for each summary:
+
+1. Crime scene
+
+2. Victim
+
+3. Death cause
+
+4. Evidence
+
+5. Perpetrator
+
+6. Motive
+
+## Results & Discussion
 
 ## References
 
