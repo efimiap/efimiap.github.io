@@ -12,6 +12,8 @@ tags:
 
 This is a blog post for our paper [*Screenplay Summarization Using Latent Narrative Structure*](https://arxiv.org/pdf/2004.12727.pdf) accepted at ACL 2020.
 
+You can use the [*CSI dataset*](https://github.com/EdinburghNLP/csi-corpus) to summarize episodes from screenplays and produce video summaries. You can find the code and 
+
 ## Screenplay summarization as scene selection
 
 Given a screenplay, which is naturally segmented into $N$ scenes $s$, the objective is to select an optimal subsequence of $M$ scenes that presents the main story -storyline- from beginning to end while omitting all unnecessary details and decreasing drastically the video length.
@@ -156,69 +158,30 @@ As mentioned earlier we use the [*CSI dataset*](https://github.com/EdinburghNLP/
 
 6. Motive
 
-## Results & Discussion
 
-Finally, we briefly present the main results of our work. 
+## Findings
 
-First of all, does narrative structure help the general summarization methods? Can we benefit by inferring a high-level structure of our document?
+Our experimental results demonstrate that knowledge about the narrative structure can boost the performance of both unsupervised and supervised methods. Interestingly, structure knowledge appears to be more important than character-based information (e.g., who is participating in the scene, what is the ratio of the main protagonists in the scene) that is tradionally analyzed for narratives. Human annotators also agree with our automatic evaluation.
 
-**Unsupervised comparison**
+However, we also investigate what is captured as ''narrative structure'' in the latent space by investigating the TP-specific distributions. These distributions are close to few-hot vectors and hence we can observe the scenes identified as TP events. Here is an illustration:
 
-<table style="width:50%">
-  <tr>
-    <th>Model</th>
-    <th>F1(%)</th> 
-  </tr>
-  <tr>
-    <td>Lead 30%</td>
-    <td>30.66</td>
-  </tr>
-  <tr>
-    <td>Last 30%</td>
-    <td>39.85</td>
-  </tr>
-  <tr>
-    <td>Mixed 30%</td>
-    <td>34.32</td>
-  </tr>
-  <tr>
-    <td>TextRank</td>
-    <td>41.75</td>
-  </tr>
-  <tr>
-    <td>Character-based TextRank (SceneSum)</td>
-    <td>42.02</td>
-  </tr>
-  <tr>
-    <td>TextRank + expected TP positions</td>
-    <td>41.05</td>
-  </tr>
-  <tr>
-    <td>SUMMER</td>
-    <td>44.70</td>
-  </tr>
-</table>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/all.png" width="450">
+</p>
 
-**Supervised comparison**
+We emperically see that different TP events as identified in the latent space tend to capture information about different aspects of the summary. We find that the latent TP representations cover the 70.25% of the aspects presented in a episode (in comparison with a randomly initialized model with no regularization which covers only 44.48% on average).
 
-<table style="width:50%">
-  <tr>
-    <td>SummaRuNNeR</td>
-    <td>48.56</td>
-  </tr>
-  <tr>
-    <td>Character-based SummaRuNNeR</td>
-    <td>47.71</td>
-  </tr>
-  <tr>
-    <td>SUMMER, fixed TP distributions</td>
-    <td>47.64</td>
-  </tr>
-  <tr>
-    <td>SUMMER</td>
-    <td>52.00</td>
-  </tr>
-</table>
+Moreover, we find that specific TP events correlate with specific aspects:
+
+<span style='color:green'>*TP1* Opportunity</span> U+02192 Crime scene, Victim
+
+<span style='color:darkgreen'>*TP2* Change of plans</span> U+02192 Victim, Death cause
+
+<span style='color:olive'>*TP3* Point of no return</span> Evidence, Perpetrator
+
+<span style='color:red'>*TP4* Major setback</span> Evidence
+
+<span style='color:indianred'> *TP5* Climax</span> Motive
 
 ## References
 
