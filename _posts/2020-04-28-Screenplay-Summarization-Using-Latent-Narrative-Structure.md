@@ -140,7 +140,7 @@ Focal regularization ($F$): we also want to discourage the TP distributions from
 $F = \sum_{i \in [1,5]}\mathcal{D}_{KL}\left(tp_i \middle\| th_i\right)$
 </p>
 
-##CSI dataset
+## CSI dataset
 
 As mentioned earlier we use the [*CSI dataset*](https://github.com/EdinburghNLP/csi-corpus) for summarization. Our dataset consists of 39 episodes. For each episode we have gold-standard scene-level binary annotations indicating whether the scene belongs to the summary. Moreover, for each summary scene we have further information about what aspect(s) of the summary the scene refers to. We consider 6 different aspects for each summary:
 
@@ -157,6 +157,68 @@ As mentioned earlier we use the [*CSI dataset*](https://github.com/EdinburghNLP/
 6. Motive
 
 ## Results & Discussion
+
+Finally, we briefly present the main results of our work. 
+
+First of all, does narrative structure help the general summarization methods? Can we benefit by inferring a high-level structure of our document?
+
+**Unsupervised comparison**
+
+<table style="width:50%">
+  <tr>
+    <th>Model</th>
+    <th>F1(%)</th> 
+  </tr>
+  <tr>
+    <td>Lead 30%</td>
+    <td>30.66</td>
+  </tr>
+  <tr>
+    <td>Last 30%</td>
+    <td>39.85</td>
+  </tr>
+  <tr>
+    <td>Mixed 30%</td>
+    <td>34.32</td>
+  </tr>
+  <tr>
+    <td>TextRank</td>
+    <td>41.75</td>
+  </tr>
+  <tr>
+    <td>Character-based TextRank (SceneSum)</td>
+    <td>42.02</td>
+  </tr>
+  <tr>
+    <td>TextRank + expected TP positions</td>
+    <td>41.05</td>
+  </tr>
+  <tr>
+    <td>SUMMER</td>
+    <td>44.70</td>
+  </tr>
+</table>
+
+**Supervised comparison**
+
+<table style="width:50%">
+  <tr>
+    <td>SummaRuNNeR</td>
+    <td>48.56</td>
+  </tr>
+  <tr>
+    <td>Character-based SummaRuNNeR</td>
+    <td>47.71</td>
+  </tr>
+  <tr>
+    <td>SUMMER, fixed TP distributions</td>
+    <td>47.64</td>
+  </tr>
+  <tr>
+    <td>SUMMER</td>
+    <td>52.00</td>
+  </tr>
+</table>
 
 ## References
 
