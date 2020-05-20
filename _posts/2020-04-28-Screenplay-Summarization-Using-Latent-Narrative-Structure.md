@@ -173,15 +173,15 @@ We emperically see that different TP events as identified in the latent space te
 
 Moreover, we find that specific TP events correlate with specific aspects:
 
-<span style='color:green'>*TP1* Opportunity</span> U+02192 Crime scene, Victim
+<span style='color:green'>*TP1* Opportunity</span> &#8594; Crime scene, Victim
 
-<span style='color:darkgreen'>*TP2* Change of plans</span> U+02192 Victim, Death cause
+<span style='color:darkgreen'>*TP2* Change of plans</span> &#8594; Victim, Death cause
 
-<span style='color:olive'>*TP3* Point of no return</span> Evidence, Perpetrator
+<span style='color:olive'>*TP3* Point of no return</span> &#8594; Evidence, Perpetrator
 
-<span style='color:red'>*TP4* Major setback</span> Evidence
+<span style='color:red'>*TP4* Major setback</span> &#8594; Evidence
 
-<span style='color:indianred'> *TP5* Climax</span> Motive
+<span style='color:indianred'> *TP5* Climax</span> &#8594; Motive
 
 ## References
 
