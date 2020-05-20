@@ -183,6 +183,8 @@ Moreover, we find that specific TP events correlate with specific aspects:
 
 <span style='color:indianred'> *TP5* Climax</span> &#8594; Motive
 
+Finally, during human evaluation we again find that SUMMER is able to cover more aspects producing more diverse and complete video summaries. [*Here*](https://github.com/ppapalampidi/SUMMER/blob/master/video_summaries/video_summaries_link.csv) are the actual video summaries produced by SUMMER and used for human evaluation.
+
 ## References
 
 [1] Mihalcea, Rada, and Paul Tarau. "Textrank: Bringing order into text." Proceedings of the 2004 conference on empirical methods in natural language processing. 2004.
