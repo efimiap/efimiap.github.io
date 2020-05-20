@@ -166,7 +166,7 @@ Our experimental results demonstrate that knowledge about the narrative structur
 However, we also investigate what is captured as ''narrative structure'' in the latent space by investigating the TP-specific distributions. These distributions are close to few-hot vectors and hence we can observe the scenes identified as TP events. Here is an illustration:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/all.png" width="450">
+  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/all.png" width="900">
 </p>
 
 We emperically see that different TP events as identified in the latent space tend to capture information about different aspects of the summary. We find that the latent TP representations cover the 70.25% of the aspects presented in a episode (in comparison with a randomly initialized model with no regularization which covers only 44.48% on average).
