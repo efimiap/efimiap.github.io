@@ -10,6 +10,27 @@ tags:
   - structure
 ---
 
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+
 This is a blog post for our paper [*Screenplay Summarization Using Latent Narrative Structure*](https://arxiv.org/pdf/2004.12727.pdf) accepted at ACL 2020.
 
 We summarize episodes from the TV series CSI: Crime Scene Investigation based on their screenplays and produce video summaries. We propose ways to incorporate knowledge about the narrative structure into general unsupervised and supervised extractive summarization algorithms. 
