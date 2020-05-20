@@ -22,15 +22,15 @@ You can find the CSI dataset for summarization [*here*](https://github.com/Edinb
 Given a screenplay, which is naturally segmented into $N$ scenes $s$, we want to select an optimal subsequence of $M$ scenes that presents the main story -storyline- from beginning to end while omitting all unnecessary details and decreasing drastically the video length.
 
 **Input**: Screenplay as a sequence of scenes $\mathcal{D}$. Each scene $s$ has description parts (i.e., what the camera sees) and dialogue parts between the characters. E.g.:  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" width="450">
-
+<!--
 <p align="center">
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" width="450">
 </p>
-
+-->
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the videos of the selected scenes. E.g.:
 
 <p align="center">
-<video controls="" height="300" ><source src="https://s3.eu-west-2.amazonaws.com/csivideosummaries/SUMMER/csi_final.webm" type="video/mp4" /> Your browser does not support the video tag.</video>
+<img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" width="450"> &#8594; <video controls="" height="300" ><source src="https://s3.eu-west-2.amazonaws.com/csivideosummaries/SUMMER/csi_final.webm" type="video/mp4" /> Your browser does not support the video tag.</video>
 </p>
 
 ## General summarization algorithms
