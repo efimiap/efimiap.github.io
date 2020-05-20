@@ -12,7 +12,10 @@ tags:
 
 This is a blog post for our paper [*Screenplay Summarization Using Latent Narrative Structure*](https://arxiv.org/pdf/2004.12727.pdf) accepted at ACL 2020.
 
-You can use the [*CSI dataset*](https://github.com/EdinburghNLP/csi-corpus) to summarize episodes from screenplays and produce video summaries. You can find the code and 
+We summarize episodes from the TV series CSI: Crime Scene Investigation based on their screenplays and produce video summaries. We propose ways to incorporate knowledge about the narrative structure into general unsupervised and supervised extractive summarization algorithms. 
+
+You can find the CSI dataset for summarization [*here*](https://github.com/EdinburghNLP/csi-corpus), our pytorch code [*here*](https://github.com/ppapalampidi/SUMMER) and our automatically created video summaries [*here*](https://github.com/ppapalampidi/SUMMER/blob/master/video_summaries/video_summaries_link.csv). 
+
 
 ## Screenplay summarization as scene selection
 
