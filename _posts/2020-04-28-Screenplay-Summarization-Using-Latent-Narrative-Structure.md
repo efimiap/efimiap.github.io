@@ -144,18 +144,13 @@ $F = \sum_{i \in [1,5]}\mathcal{D}_{KL}\left(tp_i \middle\| th_i\right)$
 
 ## CSI dataset
 
-As mentioned earlier we use the [*CSI dataset*](https://github.com/EdinburghNLP/csi-corpus) for summarization. Our dataset consists of 39 episodes. For each episode we have gold-standard scene-level binary annotations indicating whether the scene belongs to the summary. Moreover, for each summary scene we have further information about what aspect(s) of the summary the scene refers to. We consider 6 different aspects for each summary:
+We use the [*CSI dataset*](https://github.com/EdinburghNLP/csi-corpus) for summarization. Our dataset consists of 39 episodes. For each episode we have gold-standard scene-level binary annotations indicating whether the scene belongs to the summary. Moreover, for each summary scene we have further information about what aspect(s) of the summary the scene refers to. We consider 6 different aspects for each summary:
 
-1. Crime scene
-
+1. Crime scene 
 2. Victim
-
 3. Death cause
-
 4. Evidence
-
 5. Perpetrator
-
 6. Motive
 
 
