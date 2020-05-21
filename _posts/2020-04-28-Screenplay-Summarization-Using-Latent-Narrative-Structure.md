@@ -57,7 +57,7 @@ Given a screenplay, which is naturally segmented into $N$ scenes $s$, we want to
   <div class="narrow_column">
 <p><strong>&nbsp;</strong></p>
 <p><strong>&nbsp;</strong></p>
-    <span style='font-size:40px'>&#8594;</span>
+    <span style='font-size: 40px;'>&#8594;</span>
   </div>
   <div class="column">
     <video controls="" height="300" ><source src="https://s3.eu-west-2.amazonaws.com/csivideosummaries/SUMMER/csi_final.webm" type="video/mp4"  width="400" /> Your browser does not support the video tag.</video>
