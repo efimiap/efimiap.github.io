@@ -22,6 +22,12 @@ tags:
   padding: 5px;
 }
 
+.narrow_column {
+  float: left;
+  width: 5%;
+  padding: 5px;
+}
+
 /* Clearfix (clear floats) */
 .row::after {
   content: "";
@@ -46,7 +52,10 @@ Given a screenplay, which is naturally segmented into $N$ scenes $s$, we want to
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the videos of the selected scenes. E.g.:
 <div class="row">
   <div class="column">
-    <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" width="400">     &#8594;
+    <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" width="400">
+  </div>
+  <div class="narrow_column">
+    &#8594;
   </div>
   <div class="column">
     <video controls="" height="300" ><source src="https://s3.eu-west-2.amazonaws.com/csivideosummaries/SUMMER/csi_final.webm" type="video/mp4"  width="400" /> Your browser does not support the video tag.</video>
