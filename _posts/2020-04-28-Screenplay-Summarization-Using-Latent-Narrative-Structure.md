@@ -55,6 +55,9 @@ Given a screenplay, which is naturally segmented into $N$ scenes $s$, we want to
     <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" width="400">
   </div>
   <div class="narrow_column">
+p {
+    padding-bottom: 3cm;
+}
     &#8594;
   </div>
   <div class="column">
