@@ -49,10 +49,11 @@ You can find the CSI dataset for summarization [*here*](https://github.com/Edinb
 Given a screenplay, which is naturally segmented into $N$ scenes $s$, we want to select an optimal subsequence of $M$ scenes that presents the main story -storyline- from beginning to end while omitting all unnecessary details and decreasing drastically the video length.
 
 **Input**: Screenplay as a sequence of scenes $\mathcal{D}$. Each scene $s$ has description parts (i.e., what the camera sees) and dialogue parts between the characters.
+
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the videos of the selected scenes. E.g.:
 <div class="row">
   <div class="column">
-    <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/wpb9fac2df_1a.png" width="400">
+    <img src="https://images.squarespace-cdn.com/content/v1/544cc20ae4b07de01f7005b3/1585412896248-8AOERMBTRKPEG71HHCZY/ke17ZwdGBToddI8pDm48kDz4EvDCROAGjF8A0bHTZKZZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwbVXW2oezKHjD_WvkBBwsHipgIU46C1XIWg110UpjlBmOz5NqlBSU5hflcsvSfxC8/WGScreenplayscript.jpg?format=750w" width="400">
   </div>
   <div class="narrow_column">
 <p><strong>&nbsp;</strong></p>
