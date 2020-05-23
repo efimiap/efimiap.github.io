@@ -39,9 +39,9 @@ tags:
 
 This is a blog post for our paper [*Screenplay Summarization Using Latent Narrative Structure*](https://arxiv.org/pdf/2004.12727.pdf) accepted at ACL 2020.
 
-We summarize episodes from the TV series CSI: Crime Scene Investigation based on their screenplays and produce video summaries. We propose ways to incorporate knowledge about the narrative structure into general unsupervised and supervised extractive summarization algorithms. 
+We summarize episodes from the TV series "CSI: Crime Scene Investigation" by considering their screenplays and produce video summaries. According to cognitive analysis [1], in order to summarize a story it is necessary to access a high level analysis of the story that highlights its central concepts. Inspired by such cognitive studies and screenwriting theory that provides a solid analysis of the narrative structure in movies and TV shows [5], we propose ways to incorporate knowledge about the narrative structure into general unsupervised and supervised extractive summarization algorithms. 
 
-You can find the CSI dataset for summarization [*here*](https://github.com/EdinburghNLP/csi-corpus), our pytorch code [*here*](https://github.com/ppapalampidi/SUMMER) and our automatically created video summaries [*here*](https://github.com/ppapalampidi/SUMMER/blob/master/video_summaries/video_summaries_link.csv). 
+You can find the CSI dataset used for summarization [*here*](https://github.com/EdinburghNLP/csi-corpus), our pytorch source code [*here*](https://github.com/ppapalampidi/SUMMER) and our automatically created video summaries used for human evaluation purposes [*here*](https://github.com/ppapalampidi/SUMMER/blob/master/video_summaries/video_summaries_link.csv). 
 
 
 ## Screenplay summarization as scene selection
@@ -213,17 +213,21 @@ Moreover, we find that specific TP events correlate with specific aspects:
 
 <span style='color:indianred'> *TP5* Climax</span> &#8594; Motive
 
+Hence, we observe that the general definitions of the TP events that can be applied to narratives independently from their genre and topic, adopt a crime-specific definition in the case of CSI episodes. 
+
 Finally, during human evaluation we again find that SUMMER is able to cover more aspects producing more diverse and complete video summaries. [*Here*](https://github.com/ppapalampidi/SUMMER/blob/master/video_summaries/video_summaries_link.csv) are the actual video summaries produced by SUMMER and used for human evaluation.
 
 ## References
 
-[1] Mihalcea, Rada, and Paul Tarau. "Textrank: Bringing order into text." Proceedings of the 2004 conference on empirical methods in natural language processing. 2004.
+[1] Lehnert, Wendy G. "Plot units and narrative summarization." Cognitive science 5.4 (1981): 293-331.
 
-[2] Zheng, Hao, and Mirella Lapata. "Sentence Centrality Revisited for Unsupervised Summarization." Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics. 2019.
+[2] Mihalcea, Rada, and Paul Tarau. "Textrank: Bringing order into text." Proceedings of the 2004 conference on empirical methods in natural language processing. 2004.
 
-[3] Nallapati, Ramesh, Feifei Zhai, and Bowen Zhou. "Summarunner: A recurrent neural network based sequence model for extractive summarization of documents." Thirty-First AAAI Conference on Artificial Intelligence. 2017.
+[3] Zheng, Hao, and Mirella Lapata. "Sentence Centrality Revisited for Unsupervised Summarization." Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics. 2019.
 
-[4] Michael Hauge. 2017.Storytelling Made Easy:  Per-suade and Transform Your Audiences, Buyers, andClients  –  Simply,  Quickly,  and  Profitably.IndieBooks International.
+[4] Nallapati, Ramesh, Feifei Zhai, and Bowen Zhou. "Summarunner: A recurrent neural network based sequence model for extractive summarization of documents." Thirty-First AAAI Conference on Artificial Intelligence. 2017.
 
-[5] Papalampidi, Pinelopi, Frank Keller, and Mirella Lapata. "Movie Plot Analysis via Turning Point Identification." Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP). 2019.
+[5] Michael Hauge. 2017.Storytelling Made Easy:  Per-suade and Transform Your Audiences, Buyers, andClients  –  Simply,  Quickly,  and  Profitably.IndieBooks International.
+
+[6] Papalampidi, Pinelopi, Frank Keller, and Mirella Lapata. "Movie Plot Analysis via Turning Point Identification." Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP). 2019.
 
