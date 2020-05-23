@@ -107,15 +107,15 @@ According to screenwriting theory [4], all films and TV shows independently of t
 
 There are several different schemes in order to describe narrative structure. Here, we use a modern variation of traditional narrative analysis that is used by screenwriters as a practical guide to creating films and TV shows. According to that scheme there are *5 turning points* which segment the narrative into *6 thematic sections*. We are mostly interested in the definition of the turning points:
 
-<span style='color:green'>*TP1* Opportunity: Introductory event to the story occuring right after the presentation of the story setting and some background information about the protagonists.</span>
+<span style='color:green'>**TP1** Opportunity: Introductory event to the story occuring right after the presentation of the story setting and some background information about the protagonists.</span>
 
-<span style='color:darkgreen'>*TP2* Change of plans: Event where the main goal of the story is revealed. Thereafter the action begins to increase.</span>
+<span style='color:darkgreen'>**TP2** Change of plans: Event where the main goal of the story is revealed. Thereafter the action begins to increase.</span>
 
-<span style='color:olive'>*TP3* Point of no return: Event the pushs the protagonist(s) to fully commit to their goal; thereafter there is no return to pre-story state for them.</span>
+<span style='color:olive'>**TP3** Point of no return: Event the pushs the protagonist(s) to fully commit to their goal; thereafter there is no return to pre-story state for them.</span>
 
-<span style='color:red'>*TP4* Major setback: The biggest obsacle for the protagonist(s); momen that everything falls apart (temporarily or permantently).</span>
+<span style='color:red'>**TP4** Major setback: The biggest obsacle for the protagonist(s); moment that everything falls apart (temporarily or permantently).</span>
 
-<span style='color:indianred'> *TP5* Climax: moment of resolution, final event of the story and the ''biggest spoiler'' in a film.
+<span style='color:indianred'> **TP5** Climax: moment of resolution, final event of the story and the ''biggest spoiler'' in a film.</span>
 
 Previous work [5] demonstrated that such events can be identified in various Hollywood movies by both non-experts human annotators and automatic approaches. 
 
