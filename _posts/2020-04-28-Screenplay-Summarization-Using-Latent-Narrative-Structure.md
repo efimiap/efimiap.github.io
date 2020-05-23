@@ -92,14 +92,14 @@ In a supervised scenario, we assume that binary labels denoting the scenes that 
 
 and train the network with cross-entropy loss.
 
-### Is general algorithms appropriate for summarizing episodes?
+## Is general algorithms appropriate for summarizing episodes?
 
 **No!** Narratives (such as movies and TV shows) present a different and more complex structure. They deliver information piecemeal and the direction of the story changes multiple times as events unfold. Both cognitive analysis and screenwriting theory suggest that humans and automatic approaches alike should access a high level structure delineated by central events in order to understand, create or summarize a story.
 
 Hence, <u>we hypothesize that general summarization algorithms cannot be transferred directly from clean, straightforward articles to messy, complex and entangled stories, such as TV episodes</u>.
 
 
-### Our solution: Incorporating narrative structure
+## Our solution: Incorporating narrative structure
 
 **How is narrative structure defined?**
 
@@ -141,17 +141,15 @@ So, <u>it seems that the narrative structure scheme can be applied to our datase
 Another obstacle in incorporating knowledge about the narrative structure to our task (i.e., summarization on CSI episodes) is that we do not have structure-specific annotations or any other indication about the presence of TP events in the episodes.
 For this reason we use the [*TRIPOD dataset*](https://github.com/ppapalampidi/TRIPOD) containing movie screenplays and annotated TP events in order to pre-train a TP identification network. We use the same architecture as in [5], but we simplify the network to only consider screenplay scenes --we exclude the plot synopsis information-- and predict the scenes that act as TP events. For each of the five TPs, the network outputs a probability for each screenplay scene to represent the given event. 
 
-## SUMMER
+## Summarization model: SUMMER
 
-How can we incorporate the knowledge about the narrative structure --via the pre-trained TP identification network-- into the general summarization algorithms presented above?
-
-The general idea is this:
+**How can we incorporate the narrative structure into the general summarization algorithms?**
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/ezgif.com-gif-maker.gif" height="70">
 </p>
 
-So, given the screenplay segmented into scenes, we first identify the scenes that act as TPs. Then, we decide which scenes to include to the summary based on their relationship with these key events. Finally, we have a video summary by combining the selected scenes.
+Given the screenplay segmented into scenes, we first identify the scenes that act as TPs. Then, we decide which scenes to include to the summary based on their relationship with these key events -- i.e., we want to select scenes that are semantically close to at least one TP event. Finally, we produce a video summary by combining the selected scenes.
 
 **Unsupervised as structure-aware TextRank**
 
