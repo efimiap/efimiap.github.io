@@ -92,16 +92,16 @@ In a supervised scenario, we assume that binary labels denoting the scenes that 
 
 and train the network with cross-entropy loss.
 
-###Is general algorithms appropriate for summarizing episodes?**
+### Is general algorithms appropriate for summarizing episodes?
 
-**No!** Narratives (such as movies and TV shows) present a different and more complex structure. They tend to deliver information piecemeal and the direction of the story changes direction multiple times as events unfold. Both cognitive analysis and screenwriting theory suggest that humans and automatic approaches alike should access a high level structure delineated by central events in order to understand/write/summarize a story.
+**No!** Narratives (such as movies and TV shows) present a different and more complex structure. They deliver information piecemeal and the direction of the story changes multiple times as events unfold. Both cognitive analysis and screenwriting theory suggest that humans and automatic approaches alike should access a high level structure delineated by central events in order to understand, create or summarize a story.
 
 Hence, <u>we hypothesize that general summarization algorithms cannot be transferred directly from clean, straightforward articles to messy, complex and entangled stories, such as TV episodes</u>.
 
 
-**Our solution: Narrative structure**
+### Our solution: Incorporating narrative structure
 
-We aim at exploiting the underlying narrative structure of the CSI episodes for facilitating summarization. 
+**How is narrative structure defined?**
 
 According to screenwriting theory [4], all films and TV shows independently of their genre have a common high-level structure. In order for a story to be compelling, certain key events, called turning points (TPs) should be present in specific points of the story. These key events further segment the story into meaningful semantic sections (i.e., acts). 
 
@@ -117,19 +117,29 @@ There are several different schemes in order to describe narrative structure. He
 
 <span style='color:indianred'> *TP5* Climax: moment of resolution, final event of the story and the ''biggest spoiler'' in a film.
 
-Previous work [5] demonstrated that such events can be identified in various Hollywood movies by both human annotators and automatic approaches. However, is those events truly universal for all types of narratives? We want to apply these rules in a different type of narrative now: a TV show and specifically episodes where crime investigations are conducted.
+Previous work [5] demonstrated that such events can be identified in various Hollywood movies by both non-experts human annotators and automatic approaches. 
 
-Let's see how these events can be applied to an actual CSI episode:
+
+**Is the narrative structure applicable to any story?**
+
+The definition of TP events that delineate the structure of a story is intuitive and it is shown that humans in general agree when attempting to identify such events in movies. However, we want to summarize CSI episodes which differ from movies in two ways:
+
+1. They are episodes of a TV series instead of movies with isolated stories; there is some contuinity between the different episodes and a set of main characters appears in all episodes.
+
+2. The episodes are specific to crime investigations and present a well-defined and discrete structure specific to crimes: finding the crime scene, identifying the victim, collecting evidence and concluding to the perpatrator.
+
+For this reason, let's see whether we can manually identify the TP events based on the generic definitions provided by screenwriting theory in an actual CSI episode:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/csi_example.gif" height="60">
+  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/csi_example.gif" height="45">
 </p>
 
-So, it seems like a good fit for our dataset as well. However, we do not have any information about the narrative structure of the CSI episodes neither can we infer the TPs based on writing conventions (in comparison with news articles). 
+So, <u>it seems that the narrative structure scheme can be applied to our dataset as well</u>!
 
-**Pre-training on TP identification**
+**Automatic identification: Pre-training on TP identification**
 
-For this reason we use the TRIPOD dataset containing movie screenplays and annotated TP events in order to pre-train a TP identification network. We use the same architecture as in [5], but we simplify the network to only consider screenplay scenes --we exclude the plot synopsis information-- and predict the scenes that act as TP events. For each of the five TPs, the network outputs a probability for each screenplay scene to represent the given event. 
+Another obstacle in incorporating knowledge about the narrative structure to our task (i.e., summarization on CSI episodes) is that we do not have structure-specific annotations or any other indication about the presence of TP events in the episodes.
+For this reason we use the [*TRIPOD dataset*](https://github.com/ppapalampidi/TRIPOD) containing movie screenplays and annotated TP events in order to pre-train a TP identification network. We use the same architecture as in [5], but we simplify the network to only consider screenplay scenes --we exclude the plot synopsis information-- and predict the scenes that act as TP events. For each of the five TPs, the network outputs a probability for each screenplay scene to represent the given event. 
 
 ## SUMMER
 
