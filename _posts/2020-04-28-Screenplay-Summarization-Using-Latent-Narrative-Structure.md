@@ -50,10 +50,10 @@ Given a screenplay, which is naturally segmented into $N$ scenes $s$, we want to
 
 **Input**: Screenplay as a sequence of scenes $\mathcal{D}$. Each scene $s$ has description parts (i.e., what the camera sees) and dialogue parts between the characters.
 
-**Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the videos of the selected scenes. E.g.:
+**Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the videos of the selected scenes.
 <div class="row">
   <div class="column">
-    <img src="https://writebetterscripts.com/wp-content/uploads/2018/10/how-to-format-a-screenplay-3-724x1024.png" width="400">
+    <img src="https://writebetterscripts.com/wp-content/uploads/2018/10/how-to-format-a-screenplay-3-724x1024.png" width="300">
   </div>
   <div class="narrow_column">
 <p><strong>&nbsp;</strong></p>
@@ -67,11 +67,11 @@ Given a screenplay, which is naturally segmented into $N$ scenes $s$, we want to
 
 ## General summarization algorithms
 
-Previous work on automatic summarization is mostly focused on news summarization. When summarizing news articles, models can explicitly or implicitly take into advantage their simple structure: first few sentences reveal topic and key information; further details follow. In this domain, there are two popular extractive summarization models:
+Previous work on automatic summarization is mostly focused on news summarization. When summarizing news articles, models can explicitly or implicitly take into account their simple structure: first few sentences reveal topic and key information; further details follow. In this domain, there are two popular extractive summarization approaches:
 
 **Unsupervised as a graph** 
 
-_TextRank_[1] is a well-known unsupervised summarization algorithm. For _TextRank_, we create a fully-connected graph $G=(V,E)$, where $V$ is the set of nodes and $E$ is the set of edges. In our case, $V$ is the set of scenes contained in the screenplay and $E$ is the set of interactions between scenes, i.e., the semantic similarity between any two scenes. In a recent extension of _TextRank_[2], a directed neural version was proposed. The new version considers neural representations as node features in $G$ and directed edges $E$. In the directed neural $G$, we compute the centrality of each scene, i.e., how connected the scene is with the rest of the graph, as follows:
+_TextRank_[2] is a well-known unsupervised summarization algorithm. For _TextRank_, we create a fully-connected graph $G=(V,E)$, where $V$ is the set of nodes and $E$ the set of edges. In our case, $V$ is the set of scenes contained in the screenplay and $E$ is the set of interactions between scenes, i.e., semantic similarity. In a recent extension of _TextRank_[3], a directed neural version is proposed that considers neural representations as node features in $G$ and directed edges $E$. In the directed neural $G$, we compute the centrality of each scene, i.e., how connected the scene is with the rest of the graph, as follows:
 <p align="center">
 $\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}e_{ij} + \lambda_2  \sum_{j>i}e_{ij}$
 </p>
@@ -82,7 +82,7 @@ Finally, we select the top $M$ scenes that have the highest centralities as the 
 
 Now we assume that the scenes belonging to the episode summary are given. 
 
-In a supervised scenario, we assume that binary labels are given denoting the scenes that belong to the summary. In this case, standard summarization algorithms (_SummaRuNNeR_[3]) consider a document as a sequence (for us that would be a sequence of scene representations) and perform selection based on:
+In a supervised scenario, we assume that binary labels denoting the scenes that belong to the summary. In this case, standard summarization models (e.g., _SummaRuNNeR_ [4]) consider the input document as a sequence (in our case a sequence of scene representations), apply criteria such as:
 
 1. content, i.e., scene representation
 
@@ -90,11 +90,13 @@ In a supervised scenario, we assume that binary labels are given denoting the sc
 
 3. position & novelty, i.e., encoded position in the document and similarity with previous selections 
 
-**Is general algorithms appropriate for summarizing episodes?**
+and train the network with cross-entropy loss.
 
-No! TV episodes and narratives in general present significantly different structure and differ in the way that deliver information. In narratives, information is delivered piecemeal, the direction of the story often follows different paths as events unfold and the viewer/reader should watch/read the whole narrative in order to affirmatively conclude about what the story is about. 
+###Is general algorithms appropriate for summarizing episodes?**
 
-Hence, we hypothesize that general summarization algorithms cannot be transferred directly from clean, straightforward articles to messy, complex and entangled stories, such as TV episodes.
+**No!** Narratives (such as movies and TV shows) present a different and more complex structure. They tend to deliver information piecemeal and the direction of the story changes direction multiple times as events unfold. Both cognitive analysis and screenwriting theory suggest that humans and automatic approaches alike should access a high level structure delineated by central events in order to understand/write/summarize a story.
+
+Hence, <u>we hypothesize that general summarization algorithms cannot be transferred directly from clean, straightforward articles to messy, complex and entangled stories, such as TV episodes</u>.
 
 
 **Our solution: Narrative structure**
