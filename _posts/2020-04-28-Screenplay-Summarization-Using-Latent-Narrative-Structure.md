@@ -53,7 +53,7 @@ Given a screenplay, which is naturally segmented into $N$ scenes $s$, we want to
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the videos of the selected scenes. E.g.:
 <div class="row">
   <div class="column">
-    <img src="https://www.storysense.com/wpimages/wpb9fac2df_1a.png" width="400">
+    <img src="https://writebetterscripts.com/wp-content/uploads/2019/02/how-to-format-a-screenplay.png" width="400">
   </div>
   <div class="narrow_column">
 <p><strong>&nbsp;</strong></p>
