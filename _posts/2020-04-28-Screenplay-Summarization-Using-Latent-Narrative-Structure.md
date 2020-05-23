@@ -39,7 +39,7 @@ tags:
 
 This is a blog post for our paper [*Screenplay Summarization Using Latent Narrative Structure*](https://arxiv.org/pdf/2004.12727.pdf) accepted at ACL 2020.
 
-We summarize episodes from the TV series "CSI: Crime Scene Investigation" by considering their screenplays and produce video summaries. According to cognitive analysis [1], in order to summarize a story it is necessary to access a high level analysis of the story that highlights its central concepts. Inspired by such cognitive studies and screenwriting theory that provides a solid analysis of the narrative structure in movies and TV shows [5], we propose ways to incorporate knowledge about the narrative structure into general unsupervised and supervised extractive summarization algorithms. 
+We summarize episodes from the TV series "CSI: Crime Scene Investigation" by considering their screenplays and produce video summaries. According to cognitive analysis [1], in order to summarize a story it is necessary to access a high level analysis of the story that highlights its central concepts. Inspired by such cognitive studies and the screenwriting theory that provides a solid analysis of the narrative structure in movies and TV shows [5], we propose ways to incorporate knowledge about the narrative structure into general unsupervised and supervised extractive summarization algorithms. 
 
 You can find the CSI dataset used for summarization [*here*](https://github.com/EdinburghNLP/csi-corpus), our pytorch source code [*here*](https://github.com/ppapalampidi/SUMMER) and our automatically created video summaries used for human evaluation purposes [*here*](https://github.com/ppapalampidi/SUMMER/blob/master/video_summaries/video_summaries_link.csv). 
 
@@ -53,7 +53,7 @@ Given a screenplay, which is naturally segmented into $N$ scenes $s$, we want to
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the videos of the selected scenes. E.g.:
 <div class="row">
   <div class="column">
-    <img src="https://writebetterscripts.com/wp-content/uploads/2019/02/how-to-format-a-screenplay.png" width="400">
+    <img src="https://writebetterscripts.com/wp-content/uploads/2018/10/how-to-format-a-screenplay-3-724x1024.png" width="400">
   </div>
   <div class="narrow_column">
 <p><strong>&nbsp;</strong></p>
