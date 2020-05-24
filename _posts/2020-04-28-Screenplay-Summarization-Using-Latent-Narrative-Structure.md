@@ -174,12 +174,12 @@ We decide about the summary scenes in an episode based on two criteria: the scen
 $\mathcal{L} = \textit{BCE} + a O + b F$
 </p>
 
-Orthogonal regularization ($O$): we want to encourage TP representations to capture different information in the screenplay and not diverge to the same point in the episode. For this reason we maximize the Kullback-Leibler (KL) divergence~$\mathcal{D}_{KL}$ between all pairs of TP-specific attention distributions:
+<u>Orthogonal regularization ($O$)</u>: we want to encourage TP representations to capture different information in the screenplay and not diverge to the same point in the episode. For this reason we maximize the Kullback-Leibler (KL) divergence~$\mathcal{D}_{KL}$ between all pairs of TP-specific attention distributions:
 <p align="center">
 $O = \sum_{i \in [1,5]}\sum_{j \in [1,5], j \ne i}\log \frac{1}{\mathcal{D}_{KL}\left(tp_i \middle\| tp_j\right) + \epsilon}$
 </p>
 
-Focal regularization ($F$): we want to discourage the TP-specific attention distributions from deviating drastically from expected position of each TP event (expected positions are suggested in screenwriting theory and emperically found in annotations [6]). For this reason the focal loss minimizes the KL divergence between each TP attention distribution $tp_i$ and the corresponding expected position distribution $th_i$:
+<u>Focal regularization ($F$)</u>: we want to discourage the TP-specific attention distributions from deviating drastically from expected position of each TP event (expected positions are suggested in screenwriting theory and emperically found in annotations [6]). For this reason the focal loss minimizes the KL divergence between each TP attention distribution $tp_i$ and the corresponding expected position distribution $th_i$:
 <p align="center">
 $F = \sum_{i \in [1,5]}\mathcal{D}_{KL}\left(tp_i \middle\| th_i\right)$
 </p>
@@ -188,25 +188,26 @@ $F = \sum_{i \in [1,5]}\mathcal{D}_{KL}\left(tp_i \middle\| th_i\right)$
 
 We use the [*CSI dataset*](https://github.com/EdinburghNLP/csi-corpus) for summarization. Our dataset consists of 39 episodes. For each episode we have gold-standard scene-level binary annotations indicating whether the scene belongs to the summary. Moreover, for each summary scene we have further information about what aspect(s) of the summary the scene refers to. We consider 6 different aspects for each summary:
 
-1. Crime scene 
-2. Victim
-3. Death cause
-4. Evidence
-5. Perpetrator
-6. Motive
-
+<p align="center">
+* Crime scene 
+* Victim
+* Death cause
+* Evidence
+* Perpetrator
+* Motive
+</p>
 
 ## Findings
 
-Our experimental results demonstrate that knowledge about the narrative structure can boost the performance of both unsupervised and supervised methods. Interestingly, structure knowledge appears to be more important than character-based information (e.g., who is participating in the scene, what is the ratio of the main protagonists in the scene) that is traditionally analyzed for narratives. Human annotators also agree with our automatic evaluation.
+Our experimental results demonstrate that <u>knowledge about the narrative structure can boost the performance of both unsupervised and supervised methods</u>. Interestingly, <u>structure knowledge appears to be more important than character-based information</u> (e.g., who is participating in the scene, what is the ratio of the main protagonists in the scene) that is traditionally analyzed for narratives. Human annotators also agree with our automatic evaluation.
 
-However, we also investigate what is captured as ''narrative structure'' in the latent space by investigating the TP-specific distributions. These distributions are close to few-hot vectors and hence we can observe the scenes identified as TP events. Here is an illustration:
+However, we also investigate what is captured as ''narrative structure'' in the latent space by investigating the TP-specific attention distributions. These distributions are close to few-hot vectors and hence we can observe the scenes identified as TP events. Here is an illustration for 4 episodes of the dataset:
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/all.png" width="900">
 </p>
 
-We emperically see that different TP events as identified in the latent space tend to capture information about different aspects of the summary. We find that the latent TP representations cover the 70.25% of the aspects presented in a episode (in comparison with a randomly initialized model with no regularization which covers only 44.48% on average).
+We emperically see that <u>different TP events tend to capture information about different aspects of the summary</u>. We find that the <u>latent TP representations cover the 70.25% of the aspects of a summary</u> (in comparison with a randomly initialized model with no regularization which covers only 44.48% on average).
 
 Moreover, we find that specific TP events correlate with specific aspects:
 
