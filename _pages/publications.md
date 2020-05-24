@@ -27,6 +27,7 @@ author_profile: true
           [<a href="https://arxiv.org/pdf/2004.12727.pdf" class="link-in-list">paper</a>]
           [<a href="https://github.com/EdinburghNLP/csi-corpus" class="link-in-list">data</a>]
           [<a href="https://github.com/ppapalampidi/SUMMER" class="link-in-list">code</a>]
+          [<a href="https://ppapalampidi.github.io/posts/2020/08/screenplay-summarization/" class="link-in-list">post</a>]
         </li>
         <li>
           <b>Movie Plot Analysis via Turning Point Identification</b> <br/>
