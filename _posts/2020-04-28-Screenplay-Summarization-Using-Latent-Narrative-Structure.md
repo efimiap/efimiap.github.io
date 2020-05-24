@@ -44,7 +44,7 @@ We summarize episodes from the TV series "CSI: Crime Scene Investigation" by con
 You can find the CSI dataset used for summarization [*here*](https://github.com/EdinburghNLP/csi-corpus), our pytorch source code [*here*](https://github.com/ppapalampidi/SUMMER) and our automatically created video summaries used for human evaluation purposes [*here*](https://github.com/ppapalampidi/SUMMER/blob/master/video_summaries/video_summaries_link.csv). 
 
 
-# Screenplay summarization as scene selection
+## Screenplay summarization as scene selection
 
 Given a screenplay, which is naturally segmented into $N$ scenes $s$, we want to select an optimal subsequence of $M$ scenes that presents the storyline.
 
