@@ -120,7 +120,7 @@ There are several different schemes describing the narrative structure. Here, we
 Previous work [5] demonstrated that such events can be identified in various Hollywood movies by both non-expert human annotators and automatic approaches. 
 
 
-**Is narrative structure theory applicable to any story?**
+**Is narrative structure theory applicable to every story?**
 
 The definition of TP events that delineate the structure of a story is intuitive and it is shown that humans in general agree when attempting to identify such events in movies. However, we want to summarize CSI episodes which differ from movies in two ways:
 
