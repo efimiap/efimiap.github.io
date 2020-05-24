@@ -120,7 +120,7 @@ There are several different schemes in order to describe narrative structure. He
 Previous work [5] demonstrated that such events can be identified in various Hollywood movies by both non-experts human annotators and automatic approaches. 
 
 
-**Is the narrative structure applicable to any story?**
+**Is narrative structure theory applicable to any story?**
 
 The definition of TP events that delineate the structure of a story is intuitive and it is shown that humans in general agree when attempting to identify such events in movies. However, we want to summarize CSI episodes which differ from movies in two ways:
 
@@ -149,14 +149,14 @@ For this reason we use the [*TRIPOD dataset*](https://github.com/ppapalampidi/TR
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/ezgif.com-gif-maker.gif" height="70">
 </p>
 
-Given the screenplay segmented into scenes, we first identify the scenes that act as TPs. Then, we decide which scenes to include to the summary based on their relationship with these key events -- i.e., we want to select scenes that are semantically close to at least one TP event. Finally, we produce a video summary by combining the selected scenes.
+Given the screenplay segmented into scenes, we first identify the scenes that act as TPs. Then, we decide which scenes to include to the summary based on their relationship with these key events -- i.e., we want to select scenes that are semantically close to at least one TP event. Finally, we produce a video summary by combining the videos of the selected scenes.
 
 **Unsupervised as structure-aware TextRank**
 
-First, we consider our unsupervised method: TextRank. For each screenplay scene $s_i$ we compute a score $f_i$ that represents the maximum probability that the scene acts as any TP event. Then, we incorporate these scores in the centrality calculation of the scene as follows:
+For each screenplay scene $s_i$ we compute a score $f_i$ that represents the probability that the scene represents a TP event. Then, we incorporate the structure-related scores in the centrality calculation of each scene as follows:
 
 <p align="center">
-$\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}(e_{ij} + f_j) + \lambda_2  \sum_{j>i}(e_{ij} + f_i)$
+$\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}(e_{ij} + **f_j**) + \lambda_2  \sum_{j>i}(e_{ij} + **f_i**)$
 </p>
 
 Intuitively, the $f_j$ term in the first part of the equation (i.e., forward sum) increases increamentally the centrality scores assigned to scenes as the story moves on and we go to later sections of the narrative. The $f_i$ term in the second part of the equation (i.e., backward sum) increases the scores of the scenes that act as TPs.
@@ -164,13 +164,10 @@ Intuitively, the $f_j$ term in the first part of the equation (i.e., forward sum
 
 **Supervised via latent structure representations**
 
-In the supervised version of SUMMER we again select scenes for the summary based on similar criteria as SummaRuNNeR. However, we define the salience of a scene differently from before: instead of naively computed a global screenplay representation as a weighted average of all scene representation --it is unclear what a global representation stands for-- we explictly use the latent narrative structure in order to define the salience of a scene in the screenplay.
-
+We decide about the summary scenes in an episode based on two criteria: the scene content and its salience. We provide a <u>new definition for the salience of a scene</u>: unlike previous approaches that define salience as the degree of the scene's similarity with an abstract global document representation, we measure the <u>scene's salience as the degree of its similarity with the key events identified in the latent space</u>.
 <p align="center">
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/summer.gif" height="150">
 </p>
-
-So, as shown above we decide about the summary scenes based on each scene's content and relation with the key events (i.e., salience: maximum similarity with TPs).
 
 **Training** We train SUMMER end-to-end using using BCE, i.e. binary cross-entropy loss. However, we also add two extra regularization terms to the loss function in order to control the TP-specific attention distributions used for computing the latent tp representations:
 <p align="center">
@@ -201,7 +198,7 @@ We use the [*CSI dataset*](https://github.com/EdinburghNLP/csi-corpus) for summa
 
 ## Findings
 
-Our experimental results demonstrate that knowledge about the narrative structure can boost the performance of both unsupervised and supervised methods. Interestingly, structure knowledge appears to be more important than character-based information (e.g., who is participating in the scene, what is the ratio of the main protagonists in the scene) that is tradionally analyzed for narratives. Human annotators also agree with our automatic evaluation.
+Our experimental results demonstrate that knowledge about the narrative structure can boost the performance of both unsupervised and supervised methods. Interestingly, structure knowledge appears to be more important than character-based information (e.g., who is participating in the scene, what is the ratio of the main protagonists in the scene) that is traditionally analyzed for narratives. Human annotators also agree with our automatic evaluation.
 
 However, we also investigate what is captured as ''narrative structure'' in the latent space by investigating the TP-specific distributions. These distributions are close to few-hot vectors and hence we can observe the scenes identified as TP events. Here is an illustration:
 
@@ -223,7 +220,7 @@ Moreover, we find that specific TP events correlate with specific aspects:
 
 <span style='color:indianred'> *TP5* Climax</span> &#8594; Motive
 
-Hence, we observe that the general definitions of the TP events that can be applied to narratives independently from their genre and topic, adopt a crime-specific definition in the case of CSI episodes. 
+Hence, we observe that <u>the general definitions of TP events that can be applied to narratives independently from their genre and topic, adopt a crime-specific definition in the case of CSI episodes</u>. 
 
 Finally, during human evaluation we again find that SUMMER is able to cover more aspects producing more diverse and complete video summaries. [*Here*](https://github.com/ppapalampidi/SUMMER/blob/master/video_summaries/video_summaries_link.csv) are the actual video summaries produced by SUMMER and used for human evaluation.
 
