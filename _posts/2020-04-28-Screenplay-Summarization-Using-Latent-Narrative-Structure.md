@@ -230,7 +230,7 @@ Finally, let's see the automatic summary created by SUMMER for the episode ''Swa
 </p>
 
 <p align="center">
-  <img src="https://image.freepik.com/free-photo/close-up-popcorn-box-with-white-background_23-2148262902.jpg" width="100">
+  <img src="https://clipart.info/images/ccovers/1486149167Popcorn-free-to-use-cliparts.png" width="100">
 </p>
 
 
