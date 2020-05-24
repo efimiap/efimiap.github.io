@@ -199,9 +199,9 @@ We use the [*CSI dataset*](https://github.com/EdinburghNLP/csi-corpus) for summa
 
 ## Findings
 
-Our experimental results demonstrate that <u>knowledge about the narrative structure can boost the performance of both unsupervised and supervised methods</u>. Interestingly, <u>structure knowledge appears to be more important than character-based information</u> (e.g., who is participating in the scene, what is the ratio of the main protagonists in the scene) that is traditionally analyzed for narratives. Human annotators also agree with our automatic evaluation.
+Our experimental results demonstrate that <u>knowledge about the narrative structure can boost the performance of both unsupervised and supervised methods</u>. Interestingly, <u>structure knowledge appears to be more important than character-related information</u> (e.g., who is participating in the scene, what is the ratio of the main protagonists in the scene) that is traditionally analyzed for narratives. Human annotators also agree with our automatic evaluation.
 
-However, we also investigate what is captured as ''narrative structure'' in the latent space by investigating the TP-specific attention distributions. These distributions are close to few-hot vectors and hence we can observe the scenes identified as TP events. Here is an illustration for 4 episodes of the dataset:
+However, we also investigate what is captured as ''narrative structure'' in the latent space by analyzing the TP-specific attention distributions. These distributions are close to few-hot vectors and hence we can observe the scenes identified as TP events. Here is an illustration of identified TP events for 4 episodes of the dataset:
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/all.png" width="900">
@@ -211,7 +211,7 @@ We emperically see that <u>different TP events tend to capture information about
 
 Moreover, we find that specific TP events correlate with specific aspects:
 
-<span style='color:green'>*TP1* Opportunity</span> &#8594; Crime scene, Victim
+<span style='color:green'>*TP1* Opportunity</span> &#8594; <span style='color:E69FE3'>Crime scene</span>, Victim
 
 <span style='color:darkgreen'>*TP2* Change of plans</span> &#8594; Victim, Death cause
 
@@ -223,7 +223,7 @@ Moreover, we find that specific TP events correlate with specific aspects:
 
 Hence, we observe that <u>the general definitions of TP events that can be applied to narratives independently from their genre and topic, adopt a crime-specific definition in the case of CSI episodes</u>. 
 
-Finally, during human evaluation we again find that SUMMER is able to cover more aspects producing more diverse and complete video summaries. [*Here*](https://github.com/ppapalampidi/SUMMER/blob/master/video_summaries/video_summaries_link.csv) are the actual video summaries produced by SUMMER and used for human evaluation.
+Finally, during human evaluation we again find that SUMMER is able to cover more aspects producing more diverse and complete video summaries. [*Here*](https://github.com/ppapalampidi/SUMMER/blob/master/video_summaries/video_summaries_link.csv) are the actual video summaries produced by SUMMER and used for human evaluation. 
 
 ## References
 
