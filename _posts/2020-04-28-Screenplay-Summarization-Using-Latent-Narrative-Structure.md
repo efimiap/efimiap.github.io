@@ -187,12 +187,12 @@ $F = \sum_{i \in [1,5]}\mathcal{D}_{KL}\left(tp_i \middle\| th_i\right)$
 ## CSI dataset
 
 We use the [*CSI dataset*](https://github.com/EdinburghNLP/csi-corpus) for summarization. Our dataset consists of 39 episodes. For each episode we have gold-standard scene-level binary annotations indicating whether the scene belongs to the summary. Moreover, for each summary scene we have further information about what aspect(s) of the summary the scene refers to. We consider 6 different aspects for each summary:
-* Crime scene 
-* Victim
-* Death cause
-* Evidence
-* Perpetrator
-* Motive
+* <span style='color:violet'>**Crime scene**</span>
+* <span style='color:purple'>**Victim**</span>
+* <span style='color:blue'>**Death cause**</span>
+* <span style='color:grey'>**Evidence**</span>
+* <span style='color:indigo'>**Perpetrator**</span>
+* **Motive**
 
 
 ## Findings
@@ -224,14 +224,15 @@ Hence, we observe that <u>the general definitions of TP events that can be appli
 Finally, during human evaluation we again find that SUMMER is able to cover more aspects producing more diverse and complete video summaries, since it selects scenes that directly address the latent identified aspects via the TP representations. [*Here*](https://github.com/ppapalampidi/SUMMER/blob/master/video_summaries/video_summaries_link.csv) are the actual video summaries produced by SUMMER and used for human evaluation. 
 
 Finally, let's see the automatic summary created by SUMMER for the episode ''Swap Meet'' (s05e05):
+<div class="row">
+  <div class="column">
+    <video controls="" height="300" ><source src="https://s3.eu-west-2.amazonaws.com/csivideosummaries/SUMMER/s05e05.webm" type="video/mp4"  width="400" /> Your browser does not support the video tag.</video>
+  </div>
+  <div class="narrow_column">
+    <img src="https://clipart.info/images/ccovers/1486149167Popcorn-free-to-use-cliparts.png" width="100">
+  </div> 
+</div>
 
-<p align="center">
-<video controls="" height="300" ><source src="https://s3.eu-west-2.amazonaws.com/csivideosummaries/SUMMER/s05e05.webm" type="video/mp4"  width="400" /> Your browser does not support the video tag.</video>
-</p>
-
-<p align="center">
-  <img src="https://clipart.info/images/ccovers/1486149167Popcorn-free-to-use-cliparts.png" width="100">
-</p>
 
 
 ## References
