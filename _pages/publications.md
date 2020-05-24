@@ -7,12 +7,6 @@ author_profile: true
 
   You can also find my articles on my [Google Scholar](https://scholar.google.com/citations?user=3VE4eWAAAAAJ&hl=en&oi=ao) profile.
 
-{% include base_path %}
-
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
-
 <ul class="sparse-list">
         <li>
           <b>Screenplay Summarization Using Latent Narrative Structure</b> <br/>
