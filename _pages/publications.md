@@ -9,6 +9,11 @@ author_profile: true
 .sparse-list:last-child{
 	margin-bottom: 0;
 }
+.link-in-list {
+  color: #39c;
+  font-weight: 400;
+  text-decoration: none;
+}
 </style>
 </head>
 
@@ -19,9 +24,9 @@ author_profile: true
           <b>Screenplay Summarization Using Latent Narrative Structure</b> <br/>
           <u>Pinelopi Papalampidi</u>, Frank Keller, Lea Frermann and Mirella Lapata. <br/>
           ACL 2020.<br/>
-          [*paper*](https://arxiv.org/pdf/2004.12727.pdf)
-          [*data*](https://github.com/EdinburghNLP/csi-corpus)
-          [*code*](https://github.com/ppapalampidi/SUMMER)
+          [<a href="https://arxiv.org/pdf/2004.12727.pdf" class="link-in-list">paper</a>]
+          [<a href="https://github.com/EdinburghNLP/csi-corpus" class="link-in-list">data</a>]
+          [<a href="https://github.com/ppapalampidi/SUMMER" class="link-in-list">code</a>]
         </li>
         <li>
           <b>Movie Plot Analysis via Turning Point Identification</b> <br/>
