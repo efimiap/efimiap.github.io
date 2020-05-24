@@ -211,13 +211,13 @@ We emperically see that <u>different TP events tend to capture information about
 
 Moreover, we find that specific TP events correlate with specific aspects:
 
-<span style='color:green'>*TP1* Opportunity</span> &#8594; <span style='color:E69FE3'>Crime scene</span>, Victim
+<span style='color:green'>*TP1* Opportunity</span> &#8594; <span style='color:lavender'>Crime scene</span>, <span style='color:purple'>Victim</span>
 
-<span style='color:darkgreen'>*TP2* Change of plans</span> &#8594; Victim, Death cause
+<span style='color:darkgreen'>*TP2* Change of plans</span> &#8594; <span style='color:purple'>Victim</span>, <span style='color:blue'>Death cause</span>
 
-<span style='color:olive'>*TP3* Point of no return</span> &#8594; Evidence, Perpetrator
+<span style='color:olive'>*TP3* Point of no return</span> &#8594; <span style='color:grey'>Evidence</span>, <span style='color:violet'>Perpetrator</span>
 
-<span style='color:red'>*TP4* Major setback</span> &#8594; Evidence
+<span style='color:red'>*TP4* Major setback</span> &#8594; <span style='color:grey'>Evidence</span>
 
 <span style='color:indianred'> *TP5* Climax</span> &#8594; Motive
 
