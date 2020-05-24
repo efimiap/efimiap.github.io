@@ -156,7 +156,7 @@ Given the screenplay segmented into scenes, we first identify the scenes that ac
 For each screenplay scene $s_i$ we compute a score $f_i$ that represents the probability that the scene represents a TP event. Then, we incorporate the structure-related scores in the centrality calculation of each scene as follows:
 
 <p align="center">
-$\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}(e_{ij} + \bm{f_j}) + \lambda_2  \sum_{j>i}(e_{ij} + \bm{f_i})$
+$\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}(e_{ij} +$ \bm{$f_j$)$) + \lambda_2  \sum_{j>i}(e_{ij} +$ \bm{$f_i$}$)$
 </p>
 
 Intuitively, the $f_j$ term in the first part of the equation (i.e., forward sum) <u>increases increamentally the centrality scores assigned to scenes as the story moves on and we go to later sections of the narrative</u>. The $f_i$ term in the second part of the equation (i.e., backward sum) <u>increases the scores of the scenes that act as TPs</u>.
@@ -169,17 +169,17 @@ We decide about the summary scenes in an episode based on two criteria: the scen
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/summer_detailed.gif" height="200">
 </p>
 
-**Training** We train SUMMER end-to-end using using BCE, i.e. binary cross-entropy loss. However, we also add two extra regularization terms to the loss function in order to control the TP-specific attention distributions used for computing the latent tp representations:
+**Training** We train SUMMER end-to-end using using BCE, i.e. binary cross-entropy loss. However, we also add two extra regularization terms to the loss function in order to control the TP-specific attention distributions used for computing the latent TP representations:
 <p align="center">
 $\mathcal{L} = \textit{BCE} + a O + b F$
 </p>
 
-Orthogonal regularization ($O$): we want to encourage tp representations to capture different information from the screenplay and not diverge to the same point in the episode. For this reason we maximize the Kullback-Leibler (KL) divergence~$\mathcal{D}_{KL}$ between all pairs of TP attention distributions:
+Orthogonal regularization ($O$): we want to encourage TP representations to capture different information in the screenplay and not diverge to the same point in the episode. For this reason we maximize the Kullback-Leibler (KL) divergence~$\mathcal{D}_{KL}$ between all pairs of TP-specific attention distributions:
 <p align="center">
 $O = \sum_{i \in [1,5]}\sum_{j \in [1,5], j \ne i}\log \frac{1}{\mathcal{D}_{KL}\left(tp_i \middle\| tp_j\right) + \epsilon}$
 </p>
 
-Focal regularization ($F$): we also want to discourage the TP distributions from deviating drastically from the expecting positions for each TP event. The expected positions for TPs are analyzed in screenwriting theory extensively. For this reason the focal loss minimizes the KL divergence between each TP attention distribution and the corresponding expected position distribution:
+Focal regularization ($F$): we want to discourage the TP-specific attention distributions from deviating drastically from expected position of each TP event (expected positions are suggested in screenwriting theory and emperically found in annotations [6]). For this reason the focal loss minimizes the KL divergence between each TP attention distribution $tp_i$ and the corresponding expected position distribution $th_i$:
 <p align="center">
 $F = \sum_{i \in [1,5]}\mathcal{D}_{KL}\left(tp_i \middle\| th_i\right)$
 </p>
