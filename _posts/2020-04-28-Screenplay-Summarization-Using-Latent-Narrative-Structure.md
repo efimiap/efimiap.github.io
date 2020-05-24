@@ -46,9 +46,9 @@ You can find the CSI dataset used for summarization [*here*](https://github.com/
 
 ## Screenplay summarization as scene selection
 
-Given a screenplay, which is naturally segmented into $N$ scenes $s$, we want to select an optimal subsequence of $M$ scenes that presents the main story -storyline- from beginning to end while omitting all unnecessary details and decreasing drastically the video length.
+Given a screenplay, which is naturally segmented into $N$ scenes $s$, we want to select an optimal subsequence of $M$ scenes that presents the storyline.
 
-**Input**: Screenplay as a sequence of scenes $\mathcal{D}$. Each scene $s$ has description parts (i.e., what the camera sees) and dialogue parts between the characters.
+**Input**: Screenplay as a sequence of scenes. Each scene $s$ has description (i.e., what the camera sees) and dialogue parts.
 
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the videos of the selected scenes.
 <div class="row">
@@ -105,7 +105,7 @@ Hence, <u>we hypothesize that general summarization algorithms cannot be transfe
 
 According to screenwriting theory [4], all films and TV shows independently of their genre have a common high-level structure. In order for a story to be compelling, certain key events, called turning points (TPs) should be present in specific points of the story. These key events further segment the story into meaningful semantic sections (i.e., acts). 
 
-There are several different schemes in order to describe narrative structure. Here, we use a modern variation of traditional narrative analysis that is used by screenwriters as a practical guide to creating films and TV shows. According to that scheme there are *5 turning points* which segment the narrative into *6 thematic sections*. We are mostly interested in the definition of the turning points:
+There are several different schemes describing the narrative structure. Here, we use a modern variation of traditional schemes that serves  as a practical guide for screenwriters. According to that scheme there are <u>5 turning points</u> which segment the narrative into <u>6 thematic sections</u>. We are mostly interested in the definition of the **turning points**:
 
 <span style='color:green'>**TP1** Opportunity: Introductory event to the story occuring right after the presentation of the story setting and some background information about the protagonists.</span>
 
@@ -117,7 +117,7 @@ There are several different schemes in order to describe narrative structure. He
 
 <span style='color:indianred'> **TP5** Climax: moment of resolution, final event of the story and the ''biggest spoiler'' in a film.</span>
 
-Previous work [5] demonstrated that such events can be identified in various Hollywood movies by both non-experts human annotators and automatic approaches. 
+Previous work [5] demonstrated that such events can be identified in various Hollywood movies by both non-expert human annotators and automatic approaches. 
 
 
 **Is narrative structure theory applicable to any story?**
@@ -128,7 +128,7 @@ The definition of TP events that delineate the structure of a story is intuitive
 
 2. The episodes are specific to crime investigations and present a well-defined and discrete structure specific to crimes: finding the crime scene, identifying the victim, collecting evidence and concluding to the perpatrator.
 
-For this reason, let's see whether we can manually identify the TP events based on the generic definitions provided by screenwriting theory in an actual CSI episode:
+Let's see whether we can manually identify the TP events based on the generic definitions provided by screenwriting theory in an actual CSI episode:
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/csi_example.gif" height="45">
@@ -169,7 +169,7 @@ We decide about the summary scenes in an episode based on two criteria: the scen
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/summer_detailed.gif" height="200">
 </p>
 
-**Training** We train SUMMER end-to-end using using BCE, i.e. binary cross-entropy loss. However, we also add two extra regularization terms to the loss function in order to control the TP-specific attention distributions used for computing the latent TP representations:
+**Training** We train SUMMER end-to-end using BCE, i.e. binary cross-entropy loss. However, we also add two extra regularization terms to the loss function in order to control the TP-specific attention distributions used for computing the latent TP representations:
 <p align="center">
 $\mathcal{L} = \textit{BCE} + a O + b F$
 </p>
@@ -211,25 +211,30 @@ We emperically see that <u>different TP events tend to capture information about
 
 Moreover, we find that specific TP events correlate with specific aspects:
 
-<span style='color:green'>*TP1* Opportunity</span> &#8594; <span style='color:violet'>Crime scene</span>, <span style='color:purple'>Victim</span>
+<span style='color:green'>**TP1** Opportunity</span> &#8594; <span style='color:violet'>**Crime scene**</span>, <span style='color:purple'>**Victim**</span>
 
-<span style='color:darkgreen'>*TP2* Change of plans</span> &#8594; <span style='color:purple'>Victim</span>, <span style='color:blue'>Death cause</span>
+<span style='color:darkgreen'>**TP2** Change of plans</span> &#8594; <span style='color:purple'>**Victim**</span>, <span style='color:blue'>**Death cause**</span>
 
-<span style='color:olive'>*TP3* Point of no return</span> &#8594; <span style='color:grey'>Evidence</span>, <span style='color:indigo'>Perpetrator</span>
+<span style='color:olive'>**TP3** Point of no return</span> &#8594; <span style='color:grey'>**Evidence**</span>, <span style='color:indigo'>**Perpetrator**</span>
 
-<span style='color:red'>*TP4* Major setback</span> &#8594; <span style='color:grey'>Evidence</span>
+<span style='color:red'>**TP4** Major setback</span> &#8594; <span style='color:grey'>**Evidence**</span>
 
-<span style='color:indianred'> *TP5* Climax</span> &#8594; Motive
+<span style='color:indianred'> **TP5** Climax</span> &#8594; **Motive**
 
 Hence, we observe that <u>the general definitions of TP events that can be applied to narratives independently from their genre and topic, adopt a crime-specific definition in the case of CSI episodes</u>. 
 
-Finally, during human evaluation we again find that SUMMER is able to cover more aspects producing more diverse and complete video summaries. [*Here*](https://github.com/ppapalampidi/SUMMER/blob/master/video_summaries/video_summaries_link.csv) are the actual video summaries produced by SUMMER and used for human evaluation. 
+Finally, during human evaluation we again find that SUMMER is able to cover more aspects producing more diverse and complete video summaries, since it selects scenes that directly address the latent identified aspects via the TP representations. [*Here*](https://github.com/ppapalampidi/SUMMER/blob/master/video_summaries/video_summaries_link.csv) are the actual video summaries produced by SUMMER and used for human evaluation. 
 
-Our automatic summary produced by SUMMER for episode ''Swap Meet'' (s05e05):
+Finally, let's see the automatic summary created by SUMMER for the episode ''Swap Meet'' (s05e05):
 
 <p align="center">
 <video controls="" height="300" ><source src="https://s3.eu-west-2.amazonaws.com/csivideosummaries/SUMMER/s05e05.webm" type="video/mp4"  width="400" /> Your browser does not support the video tag.</video>
 </p>
+
+<p align="center">
+  <img src="https://image.freepik.com/free-photo/close-up-popcorn-box-with-white-background_23-2148262902.jpg" width="900">
+</p>
+
 
 ## References
 
