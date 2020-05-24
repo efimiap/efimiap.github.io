@@ -156,7 +156,7 @@ Given the screenplay segmented into scenes, we first identify the scenes that ac
 For each screenplay scene $s_i$ we compute a score $f_i$ that represents the probability that the scene represents a TP event. Then, we incorporate the structure-related scores in the centrality calculation of each scene as follows:
 
 <p align="center">
-$\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}(e_{ij} +$ \bm{$f_j$)$) + \lambda_2  \sum_{j>i}(e_{ij} +$ \bm{$f_i$}$)$
+$\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}(e_{ij} +$ **$f_j$**$) + \lambda_2  \sum_{j>i}(e_{ij} +$ **$f_i$**$)$
 </p>
 
 Intuitively, the $f_j$ term in the first part of the equation (i.e., forward sum) <u>increases increamentally the centrality scores assigned to scenes as the story moves on and we go to later sections of the narrative</u>. The $f_i$ term in the second part of the equation (i.e., backward sum) <u>increases the scores of the scenes that act as TPs</u>.
