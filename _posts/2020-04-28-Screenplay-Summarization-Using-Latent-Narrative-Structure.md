@@ -169,21 +169,6 @@ We decide about the summary scenes in an episode based on two criteria: the scen
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/summer_detailed.gif" height="200">
 </p>
 
-**Training** We train SUMMER end-to-end using BCE, i.e. binary cross-entropy loss. However, we also add two extra regularization terms to the loss function in order to control the TP-specific attention distributions used for computing the latent TP representations:
-<p align="center">
-$\mathcal{L} = \textit{BCE} + a O + b F$
-</p>
-
-<u>Orthogonal regularization ($O$)</u>: we want to encourage TP representations to capture different information in the screenplay and not diverge to the same point in the episode. For this reason we maximize the Kullback-Leibler (KL) divergence~$\mathcal{D}_{KL}$ between all pairs of TP-specific attention distributions:
-<p align="center">
-$O = \sum_{i \in [1,5]}\sum_{j \in [1,5], j \ne i}\log \frac{1}{\mathcal{D}_{KL}\left(tp_i \middle\| tp_j\right) + \epsilon}$
-</p>
-
-<u>Focal regularization ($F$)</u>: we want to discourage the TP-specific attention distributions from deviating drastically from expected position of each TP event (expected positions are suggested in screenwriting theory and emperically found in annotations [6]). For this reason the focal loss minimizes the KL divergence between each TP attention distribution $tp_i$ and the corresponding expected position distribution $th_i$:
-<p align="center">
-$F = \sum_{i \in [1,5]}\mathcal{D}_{KL}\left(tp_i \middle\| th_i\right)$
-</p>
-
 ## CSI dataset
 
 We use the [*CSI dataset*](https://github.com/EdinburghNLP/csi-corpus) for summarization. Our dataset consists of 39 episodes. For each episode we have gold-standard scene-level binary annotations indicating whether the scene belongs to the summary. Moreover, for each summary scene we have further information about what aspect(s) of the summary the scene refers to. We consider 6 different aspects for each summary:
