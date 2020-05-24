@@ -225,6 +225,12 @@ Hence, we observe that <u>the general definitions of TP events that can be appli
 
 Finally, during human evaluation we again find that SUMMER is able to cover more aspects producing more diverse and complete video summaries. [*Here*](https://github.com/ppapalampidi/SUMMER/blob/master/video_summaries/video_summaries_link.csv) are the actual video summaries produced by SUMMER and used for human evaluation. 
 
+Our automatic summary produced by SUMMER for episode ''Swap Meet'' (s05e05):
+
+<p align="center">
+<video controls="" height="300" ><source src="https://s3.eu-west-2.amazonaws.com/csivideosummaries/SUMMER/csi_final.webm" type="video/mp4"  width="400" /> Your browser does not support the video tag.</video>
+</p>
+
 ## References
 
 [1] Lehnert, Wendy G. "Plot units and narrative summarization." Cognitive science 5.4 (1981): 293-331.
