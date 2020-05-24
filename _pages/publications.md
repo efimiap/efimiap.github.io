@@ -4,6 +4,13 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
+<head>
+<style>
+.sparse-list:last-child{
+	margin-bottom: 0;
+}
+</style>
+</head>
 
   You can also find my articles on my [Google Scholar](https://scholar.google.com/citations?user=3VE4eWAAAAAJ&hl=en&oi=ao) profile.
 
