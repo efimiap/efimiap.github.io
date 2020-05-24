@@ -1,4 +1,5 @@
 ---
+layout: archive
 title: 'Screenplay Summarization Using Latent Narrative Structure'
 date: 2020-04-28
 permalink: /posts/2020/08/screenplay-summarization/
@@ -155,10 +156,10 @@ Given the screenplay segmented into scenes, we first identify the scenes that ac
 For each screenplay scene $s_i$ we compute a score $f_i$ that represents the probability that the scene represents a TP event. Then, we incorporate the structure-related scores in the centrality calculation of each scene as follows:
 
 <p align="center">
-$\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}(e_{ij} +$ **$f_j$**$) + \lambda_2  \sum_{j>i}(e_{ij} +$ **$f_i$**$)$
+$\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}(e_{ij} +$ $f_j$$) + \lambda_2  \sum_{j>i}(e_{ij} +$ $f_i$$)$
 </p>
 
-Intuitively, the $f_j$ term in the first part of the equation (i.e., forward sum) <u>increases increamentally the centrality scores assigned to scenes as the story moves on and we go to later sections of the narrative</u>. The $f_i$ term in the second part of the equation (i.e., backward sum) <u>increases the scores of the scenes that act as TPs</u>.
+Intuitively, the **$f_j$** term in the first part of the equation (i.e., forward sum) <u>increases increamentally the centrality scores assigned to scenes as the story moves on and we go to later sections of the narrative</u>. The **$f_i$** term in the second part of the equation (i.e., backward sum) <u>increases the scores of the scenes that act as TPs</u>.
 
 
 **Supervised via latent structure representations**
@@ -210,11 +211,11 @@ We emperically see that <u>different TP events tend to capture information about
 
 Moreover, we find that specific TP events correlate with specific aspects:
 
-<span style='color:green'>*TP1* Opportunity</span> &#8594; <span style='color:lavender'>Crime scene</span>, <span style='color:purple'>Victim</span>
+<span style='color:green'>*TP1* Opportunity</span> &#8594; <span style='color:violet'>Crime scene</span>, <span style='color:purple'>Victim</span>
 
 <span style='color:darkgreen'>*TP2* Change of plans</span> &#8594; <span style='color:purple'>Victim</span>, <span style='color:blue'>Death cause</span>
 
-<span style='color:olive'>*TP3* Point of no return</span> &#8594; <span style='color:grey'>Evidence</span>, <span style='color:violet'>Perpetrator</span>
+<span style='color:olive'>*TP3* Point of no return</span> &#8594; <span style='color:grey'>Evidence</span>, <span style='color:indigo'>Perpetrator</span>
 
 <span style='color:red'>*TP4* Major setback</span> &#8594; <span style='color:grey'>Evidence</span>
 
