@@ -228,7 +228,7 @@ Finally, during human evaluation we again find that SUMMER is able to cover more
 Our automatic summary produced by SUMMER for episode ''Swap Meet'' (s05e05):
 
 <p align="center">
-<video controls="" height="300" ><source src="https://s3.eu-west-2.amazonaws.com/csivideosummaries/SUMMER/csi_final.webm" type="video/mp4"  width="400" /> Your browser does not support the video tag.</video>
+<video controls="" height="300" ><source src="https://s3.eu-west-2.amazonaws.com/csivideosummaries/SUMMER/s05e05.webm" type="video/mp4"  width="400" /> Your browser does not support the video tag.</video>
 </p>
 
 ## References
