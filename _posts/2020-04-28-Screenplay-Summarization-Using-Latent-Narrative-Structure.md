@@ -207,7 +207,7 @@ However, we also investigate what is captured as ''narrative structure'' in the 
 
 We emperically see that <u>different TP events tend to capture information about different aspects of the summary</u>. We find that the <u>latent TP representations cover the 70.25% of the aspects of a summary</u> (in comparison with a randomly initialized model with no regularization which covers only 44.48% on average).
 
-Moreover, we find that specific TP events correlate with specific aspects:
+Moreover, we find that different TP events correlate with specific summary aspects:
 
 <span style='color:green'>**TP1** Opportunity</span> &#8594; <span style='color:violet'>**Crime scene**</span>, <span style='color:purple'>**Victim**</span>
 
