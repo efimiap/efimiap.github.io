@@ -223,7 +223,7 @@ Hence, we observe that <u>the general definitions of TP events that can be appli
 
 Finally, during human evaluation we again find that SUMMER is able to cover more aspects producing more diverse and complete video summaries, since it selects scenes that directly address the latent identified aspects via the TP representations. [*Here*](https://github.com/ppapalampidi/SUMMER/blob/master/video_summaries/video_summaries_link.csv) are the actual video summaries produced by SUMMER and used for human evaluation. 
 
-Finally, let's see the automatic summary created by SUMMER for the episode ''Swap Meet'' (s05e05):
+As an example, let's see the summary created by SUMMER for the episode ''Swap Meet'' (s05e05):
   <img src="https://clipart.info/images/ccovers/1486149167Popcorn-free-to-use-cliparts.png" width="100">
 
 <p align="center">
