@@ -53,7 +53,7 @@ Given a screenplay, which is naturally segmented into $N$ scenes $s$, we want to
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the videos of the selected scenes.
 <div class="row">
   <div class="column">
-    <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/screenplay_example.png" width="300">
+    <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/screenplay_example.png" width="500">
   </div>
   <div class="narrow_column">
 <p><strong>&nbsp;</strong></p>
