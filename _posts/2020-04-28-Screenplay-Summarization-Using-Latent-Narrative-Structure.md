@@ -53,7 +53,7 @@ Given a screenplay, which is naturally segmented into $N$ scenes $s$, we want to
 **Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the videos of the selected scenes.
 <div class="row">
   <div class="column">
-    <img src="https://writebetterscripts.com/wp-content/uploads/2018/10/how-to-format-a-screenplay-3-724x1024.png" width="300">
+    <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/screenplay_example.png" width="300">
   </div>
   <div class="narrow_column">
 <p><strong>&nbsp;</strong></p>
@@ -107,13 +107,13 @@ According to screenwriting theory [4], all films and TV shows independently of t
 
 There are several different schemes describing the narrative structure. Here, we use a modern variation of traditional schemes that serves  as a practical guide for screenwriters. According to that scheme there are <u>5 turning points</u> which segment the narrative into <u>6 thematic sections</u>. We are mostly interested in the definition of the **turning points**:
 
-<span style='color:green'>**TP1** Opportunity: Introductory event to the story occuring right after the presentation of the story setting and some background information about the protagonists.</span>
+<span style='color:green'>**TP1** Opportunity: Introductory event to the story occurring right after the presentation of the story setting and some background information about the protagonists.</span>
 
 <span style='color:darkgreen'>**TP2** Change of plans: Event where the main goal of the story is revealed. Thereafter the action begins to increase.</span>
 
-<span style='color:olive'>**TP3** Point of no return: Event the pushs the protagonist(s) to fully commit to their goal; thereafter there is no return to pre-story state for them.</span>
+<span style='color:olive'>**TP3** Point of no return: Event the pushes the protagonist(s) to fully commit to their goal; thereafter there is no return to pre-story state for them.</span>
 
-<span style='color:red'>**TP4** Major setback: The biggest obsacle for the protagonist(s); moment that everything falls apart (temporarily or permantently).</span>
+<span style='color:red'>**TP4** Major setback: The biggest obstacle for the protagonist(s); moment that everything falls apart (temporarily or permanently).</span>
 
 <span style='color:indianred'> **TP5** Climax: moment of resolution, final event of the story and the ''biggest spoiler'' in a film.</span>
 
