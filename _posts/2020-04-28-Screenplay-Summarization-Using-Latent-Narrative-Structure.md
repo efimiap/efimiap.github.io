@@ -90,7 +90,7 @@ and train the network with cross-entropy loss.
 
 ## Is general algorithms appropriate for summarizing episodes?
 
-<p align="center">No!</p>
+<p>No!</p>
 
 Narratives (such as movies and TV shows) present a different and more complex structure. They deliver information piecemeal and the direction of the story changes multiple times as events unfold. Both cognitive analysis and screenwriting theory suggest that humans and automatic approaches alike should access a high level structure delineated by central events in order to understand, create or summarize a story.
 
