@@ -48,7 +48,7 @@ You can find the CSI dataset used for summarization [*here*](https://github.com/
 
 **Input**: Screenplay as a sequence of $N$ scenes $s$.
 
-**Output**:Optimal subsequence of $M$<<$N$ scenes that presents the storyline; video summary by merging the videos of the selected scenes.
+**Output**: Subsequence of $M$<<$N$ scenes presenting the storyline; video summary by merging the videos of the selected scenes.
 <div class="row">
   <div class="column">
     <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/screenplay_example.png" width="600">
@@ -63,17 +63,17 @@ You can find the CSI dataset used for summarization [*here*](https://github.com/
   </div>
 </div>
 
-## General summarization algorithms
+## General extractive summarization algorithms
 
 Previous work on automatic summarization is mostly focused on news summarization. When summarizing news articles, models can explicitly or implicitly take into account their simple structure: first few sentences reveal topic and key information; further details follow. In this domain, there are two popular extractive summarization approaches:
 
 **Unsupervised as a graph** 
 
-_TextRank_[2] is a well-known unsupervised summarization algorithm. For _TextRank_, we create a fully-connected graph $G=(V,E)$, where $V$ is the set of nodes and $E$ the set of edges. In our case, $V$ is the set of scenes contained in the screenplay and $E$ is the set of interactions between scenes, i.e., semantic similarity. In a recent extension of _TextRank_[3], a directed neural version is proposed that considers neural representations as node features in $G$ and directed edges $E$. In the directed neural $G$, we compute the centrality of each scene, i.e., how connected the scene is with the rest of the graph, as follows:
+_TextRank_[2] is a popular unsupervised summarization algorithm. For _TextRank_, we create a fully-connected graph $G=(V,E)$, where $V$ is the set of scenes in an episode and $E$ the set of interactions between scenes, i.e., semantic similarity. In a recent extension of _TextRank_[3], a directed neural version is proposed that considers neural representations as node features in $G$ and directed edges $E$ between scenes. In the directed neural $G$, we compute the centrality of each scene, i.e., how connected the scene is with the rest of the graph, as follows:
 <p align="center">
 $\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}e_{ij} + \lambda_2  \sum_{j>i}e_{ij}$
 </p>
-where $e_{ij}$ is the semantic similarity between two scenes $s_i,s_j$ and $\lambda_1,\lambda_2$ are the parameters that define whether prior or future scenes influence more the centrality score of a current scene.
+where $e_{ij}$ is the semantic similarity between two scenes $s_i,s_j$ and $\lambda_1,\lambda_2$ are the parameters that define the degree of influence from previous and future scenes in the screenplay.
 Finally, we select the top $M$ scenes that have the highest centralities as the summary.
 
 **Supervised as a sequence**
@@ -90,18 +90,20 @@ and train the network with cross-entropy loss.
 
 ## Is general algorithms appropriate for summarizing episodes?
 
-**No!** Narratives (such as movies and TV shows) present a different and more complex structure. They deliver information piecemeal and the direction of the story changes multiple times as events unfold. Both cognitive analysis and screenwriting theory suggest that humans and automatic approaches alike should access a high level structure delineated by central events in order to understand, create or summarize a story.
+<p align="center">**No!**</p>
+
+Narratives (such as movies and TV shows) present a different and more complex structure. They deliver information piecemeal and the direction of the story changes multiple times as events unfold. Both cognitive analysis and screenwriting theory suggest that humans and automatic approaches alike should access a high level structure delineated by central events in order to understand, create or summarize a story.
 
 Hence, <u>we hypothesize that general summarization algorithms cannot be transferred directly from clean, straightforward articles to messy, complex and entangled stories, such as TV episodes</u>.
 
 
-## Our solution: Incorporating narrative structure
+## Our solution: Incorporating narrative structure knowledge
 
 **How is narrative structure defined?**
 
 According to screenwriting theory [4], all films and TV shows independently of their genre have a common high-level structure. In order for a story to be compelling, certain key events, called turning points (TPs) should be present in specific points of the story. These key events further segment the story into meaningful semantic sections (i.e., acts). 
 
-There are several different schemes describing the narrative structure. Here, we use a modern variation of traditional schemes that serves  as a practical guide for screenwriters. According to that scheme there are <u>5 turning points</u> which segment the narrative into <u>6 thematic sections</u>. We are mostly interested in the definition of the **turning points**:
+There are several different schemes describing the narrative structure. Here, we use a modern variation that serves  as practical guide for screenwriters. According to that scheme there are <u>5 turning points</u> which segment the narrative into <u>6 thematic sections</u>. We are mostly interested in the definition of the **turning points**:
 
 <span style='color:green'>**TP1** Opportunity: Introductory event to the story occurring right after the presentation of the story setting and some background information about the protagonists.</span>
 
@@ -145,7 +147,11 @@ For this reason we use the [*TRIPOD dataset*](https://github.com/ppapalampidi/TR
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/ezgif.com-gif-maker.gif" height="70">
 </p>
 
-Given the screenplay segmented into scenes, we first identify the scenes that act as TPs. Then, we decide which scenes to include to the summary based on their relationship with these key events -- i.e., we want to select scenes that are semantically close to at least one TP event. Finally, we produce a video summary by combining the videos of the selected scenes.
+1. Identification of TP scenes
+
+2. Selection of summary scenes that refer to the storyline as defined by the TPs
+
+3. Video summary by merging the videos of the selected scenes
 
 **Unsupervised as structure-aware TextRank**
 
