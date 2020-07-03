@@ -46,11 +46,9 @@ You can find the CSI dataset used for summarization [*here*](https://github.com/
 
 ## Screenplay summarization as scene selection
 
-Given a screenplay, which is naturally segmented into $N$ scenes $s$, we want to select an optimal subsequence of $M$ scenes that presents the storyline.
+**Input**: Screenplay as a sequence of $N$ scenes $s$.
 
-**Input**: Screenplay as a sequence of scenes. Each scene $s$ has description (i.e., what the camera sees) and dialogue parts.
-
-**Output**: much smaller subsequence of scenes containing most important events in the story; video summary by merging the videos of the selected scenes.
+**Output**:Optimal subsequence of $M$<<$N$ scenes that presents the storyline; video summary by merging the videos of the selected scenes.
 <div class="row">
   <div class="column">
     <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/screenplay_example.png" width="600">
