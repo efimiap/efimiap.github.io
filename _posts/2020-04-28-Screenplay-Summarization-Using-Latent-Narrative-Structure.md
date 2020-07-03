@@ -48,7 +48,7 @@ You can find the CSI dataset used for summarization [*here*](https://github.com/
 
 **Input**: Screenplay as a sequence of $N$ scenes $s$.
 
-**Output**: Subsequence of $M$<<$N$ scenes presenting the storyline; video summary by merging the videos of the selected scenes.
+**Output**: Sequence of $M$<<$N$ scenes presenting the storyline; video summary of the selected scenes.
 <div class="row">
   <div class="column">
     <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/screenplay_example.png" width="600">
@@ -90,7 +90,7 @@ and train the network with cross-entropy loss.
 
 ## Is general algorithms appropriate for summarizing episodes?
 
-<p align="center">**No!**</p>
+<p align="center">No!</p>
 
 Narratives (such as movies and TV shows) present a different and more complex structure. They deliver information piecemeal and the direction of the story changes multiple times as events unfold. Both cognitive analysis and screenwriting theory suggest that humans and automatic approaches alike should access a high level structure delineated by central events in order to understand, create or summarize a story.
 
@@ -161,12 +161,21 @@ For each screenplay scene $s_i$ we compute a score $f_i$ that represents the pro
 $\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}(e_{ij} +$ $f_j$$) + \lambda_2  \sum_{j>i}(e_{ij} +$ $f_i$$)$
 </p>
 
-Intuitively, the **$f_j$** term in the first part of the equation (i.e., forward sum) <u>increases increamentally the centrality scores assigned to scenes as the story moves on and we go to later sections of the narrative</u>. The **$f_i$** term in the second part of the equation (i.e., backward sum) <u>increases the scores of the scenes that act as TPs</u>.
+Intuitively: 
+
+- The **$f_j$** term in the first part of the equation (i.e., forward sum) <u>increases increamentally the centrality scores assigned to scenes as the story moves on and we go to later sections of the narrative</u>.
+
+- The **$f_i$** term in the second part of the equation (i.e., backward sum) <u>increases the scores of the scenes that act as TPs</u>.
 
 
 **Supervised via latent structure representations**
 
-We decide about the summary scenes in an episode based on two criteria: the scene's <u>content</u> and <u>salience</u>. We provide a <u>new definition for the salience of a scene</u>: unlike previous approaches that define salience as the degree of the scene's similarity with an abstract global document representation, we measure the <u>scene's salience as the degree of its similarity with the key events identified in the latent space</u>.
+Criteria for selecting summary scenes:
+
+1. <u>Content</u>: again contextualized scene representation
+
+2. <u>New definition of salience</u>: Unlike previous approaches that define salience as the degree of the scene's similarity with a single global document representation, we measure the <u>scene's salience as the degree of its similarity with the storyline identified in the latent space</u>. The representation of each key event that delinate the episode's storyline is mainly influenced by a few scenes. 
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/new_summer_supervised.gif" height="200">
 </p>
