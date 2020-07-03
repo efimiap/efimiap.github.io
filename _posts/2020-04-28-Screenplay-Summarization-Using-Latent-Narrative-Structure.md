@@ -84,11 +84,9 @@ Now we assume that the scenes belonging to the episode summary are given.
 
 In a supervised scenario, we assume that binary labels denoting the scenes that belong to the summary. In this case, standard summarization models (e.g., _SummaRuNNeR_ [4]) consider the input document as a sequence (in our case a sequence of scene representations), apply criteria such as:
 
-1. content, i.e., scene representation
+1. content, i.e., contextualized scene representation
 
 2. salience i.e., similarity with a global document representation
-
-3. position & novelty, i.e., encoded position in the document and similarity with previous selections 
 
 and train the network with cross-entropy loss.
 
@@ -146,7 +144,7 @@ For this reason we use the [*TRIPOD dataset*](https://github.com/ppapalampidi/TR
 **How can we incorporate the narrative structure into the general summarization algorithms?**
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/ezgif.com-gif-maker.gif" height="70">
+  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/new_summer_supervised.gif" height="70">
 </p>
 
 Given the screenplay segmented into scenes, we first identify the scenes that act as TPs. Then, we decide which scenes to include to the summary based on their relationship with these key events -- i.e., we want to select scenes that are semantically close to at least one TP event. Finally, we produce a video summary by combining the videos of the selected scenes.
