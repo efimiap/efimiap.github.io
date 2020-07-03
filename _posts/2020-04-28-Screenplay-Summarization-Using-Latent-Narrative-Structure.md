@@ -144,7 +144,7 @@ For this reason we use the [*TRIPOD dataset*](https://github.com/ppapalampidi/TR
 **How can we incorporate the narrative structure into the general summarization algorithms?**
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/new_summer_supervised.gif" height="70">
+  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/ezgif.com-gif-maker.gif" height="70">
 </p>
 
 Given the screenplay segmented into scenes, we first identify the scenes that act as TPs. Then, we decide which scenes to include to the summary based on their relationship with these key events -- i.e., we want to select scenes that are semantically close to at least one TP event. Finally, we produce a video summary by combining the videos of the selected scenes.
@@ -164,7 +164,7 @@ Intuitively, the **$f_j$** term in the first part of the equation (i.e., forward
 
 We decide about the summary scenes in an episode based on two criteria: the scene's <u>content</u> and <u>salience</u>. We provide a <u>new definition for the salience of a scene</u>: unlike previous approaches that define salience as the degree of the scene's similarity with an abstract global document representation, we measure the <u>scene's salience as the degree of its similarity with the key events identified in the latent space</u>.
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/summer_detailed.gif" height="200">
+  <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/new_summer_supervised.gif" height="200">
 </p>
 
 ## CSI dataset
