@@ -149,13 +149,13 @@ For this reason we use the [*TRIPOD dataset*](https://github.com/ppapalampidi/TR
 
 1. Identification of TP scenes
 
-2. Selection of summary scenes that refer to the storyline as defined by the TPs
+2. Selection of scenes to include to the summary that are closely related to the storyline as identified by the TPs
 
 3. Video summary by merging the videos of the selected scenes
 
 **Unsupervised as structure-aware TextRank**
 
-For each screenplay scene $s_i$ we compute a score $f_i$ that represents the probability that the scene represents a TP event. Then, we incorporate the structure-related scores in the centrality calculation of each scene as follows:
+For each screenplay scene $s_i$ we compute a score $f_i$ that represents the probability that the scene represents any TP event. Then, we incorporate the structure-related scores in the centrality calculation of each scene as follows:
 
 <p align="center">
 $\textit{centrality}(s_i) = \lambda_1  \sum_{j<i}(e_{ij} +$ $f_j$$) + \lambda_2  \sum_{j>i}(e_{ij} +$ $f_i$$)$
@@ -165,16 +165,16 @@ Intuitively:
 
 - The **$f_j$** term in the first part of the equation (i.e., forward sum) <u>increases increamentally the centrality scores assigned to scenes as the story moves on and we go to later sections of the narrative</u>.
 
-- The **$f_i$** term in the second part of the equation (i.e., backward sum) <u>increases the scores of the scenes that act as TPs</u>.
+- The **$f_i$** term in the second part of the equation (i.e., backward sum) <u>increases the scores of the scenes that are probable TP events</u>.
 
 
 **Supervised via latent structure representations**
 
 Criteria for selecting summary scenes:
 
-1. <u>Content</u>: again contextualized scene representation
+1. <u>Content</u>: Contextualized scene representations.
 
-2. <u>New definition of salience</u>: Unlike previous approaches that define salience as the degree of the scene's similarity with a single global document representation, we measure the <u>scene's salience as the degree of its similarity with the storyline identified in the latent space</u>. The representation of each key event that delinate the episode's storyline is mainly influenced by a few scenes. 
+2. <u>Salience</u>: We introduce a **new definition** for salience. <u>We explicitly measure the scene's similarity with the storyline of the episode, as identified in the latent space by the 5 TP events</u>. Hence, in our case we use different vectors in order to represent different important plot points instead of assuming that there is one main topic that can be encoded into a single vector. Moreove, only a few scenes are identified as important and contribute to the representation of each key event.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/new_summer_supervised.gif" height="200">
@@ -183,7 +183,7 @@ Criteria for selecting summary scenes:
 
 ## Findings
 
-Our experimental results demonstrate that <u>knowledge about the narrative structure can boost the performance of both unsupervised and supervised methods</u>. Interestingly, <u>structure knowledge appears to be more important than character-related information</u> (e.g., who is participating in the scene, what is the ratio of the main protagonists in the scene) that is traditionally analyzed for narratives. Human annotators also agree with our automatic evaluation and find our summaries more complete and informative.
+Our experimental results demonstrate that <u>knowledge about the narrative structure can boost the performance of both unsupervised and supervised methods</u>. Interestingly, <u>structure knowledge appears to be more important than character-related information</u> (e.g., who is participating in the scene, what is the ratio of the main protagonists in the scene) that is traditionally used in the context of narratives. Human annotators also agree with our automatic evaluation and find our summaries more complete and informative.
 
 However, we also investigate what is captured as ''narrative structure'' in the latent space by analyzing the TP-specific attention distributions. These distributions are close to few-hot vectors and hence we can observe the scenes identified as TP events. Here is an illustration of identified TP events for 4 episodes of the dataset:
 
@@ -191,14 +191,13 @@ However, we also investigate what is captured as ''narrative structure'' in the 
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/all.png" width="900">
 </p>
 
-We emperically see that <u>different TP events tend to capture information about different aspects of the summary</u>. We find that the <u>latent TP representations cover the 70.25% of the aspects of a summary</u> (in comparison with a randomly initialized model with no regularization which covers only 44.48% on average).
-
+We emperically see that <u>different TP events tend to capture information about different aspects of the summary</u>. 
 Moreover, we find that different TP events correlate with specific summary aspects:
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ppapalampidi/ppapalampidi.github.io/master/images/correlations.gif" height="200">
 </p>
-Hence, we observe that <u>the general definitions of TP events that can be applied to narratives independently from their genre and topic, adopt a crime-specific definition in the case of CSI episodes</u>. 
+Hence, we observe that <u>the general definitions of TP events that can be applied to all kinds of narratives adopt a crime-specific definition in the case of CSI episodes</u>. 
 
 Finally, during human evaluation we again find that SUMMER is able to cover more aspects producing more diverse and complete video summaries, since it selects scenes that directly address the latent identified aspects via the TP representations. [*Here*](https://github.com/ppapalampidi/SUMMER/blob/master/video_summaries/video_summaries_link.csv) are the actual video summaries produced by SUMMER and used for human evaluation. 
 
