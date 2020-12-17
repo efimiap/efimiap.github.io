@@ -21,6 +21,13 @@ author_profile: true
 
 <ul class="sparse-list">
         <li>
+          <b>Movie Summarization via Sparse Graph Construction</b> <br/>
+          <u>Pinelopi Papalampidi</u>, Frank Keller, and Mirella Lapata. <br/>
+          AAAI 2021.<br/>
+          [<a href="https://arxiv.org/pdf/2012.07536.pdf" class="link-in-list">paper</a>]
+          [<a href="https://github.com/ppapalampidi/GraphTP" class="link-in-list">data/code</a>]
+        </li>
+        <li>
           <b>Screenplay Summarization Using Latent Narrative Structure</b> <br/>
           <u>Pinelopi Papalampidi</u>, Frank Keller, Lea Frermann and Mirella Lapata. <br/>
           ACL 2020.<br/>
