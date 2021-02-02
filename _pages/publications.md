@@ -25,7 +25,8 @@ author_profile: true
           <u>Pinelopi Papalampidi</u>, Frank Keller, and Mirella Lapata. <br/>
           AAAI 2021.<br/>
           [<a href="https://arxiv.org/pdf/2012.07536.pdf" class="link-in-list">paper</a>]
-          [<a href="https://github.com/ppapalampidi/GraphTP" class="link-in-list">data/code</a>]
+          [<a href="https://datashare.ed.ac.uk/handle/10283/3819" class="link-in-list">data</a>]
+          [<a href="https://github.com/ppapalampidi/GraphTP" class="link-in-list">code</a>]
         </li>
         <li>
           <b>Screenplay Summarization Using Latent Narrative Structure</b> <br/>
