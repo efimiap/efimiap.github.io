@@ -8,7 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-I am a final year PhD student at the [School of Informatics, University of Edinburgh](https://www.ed.ac.uk/informatics/) and member of [EdinburghNLP](https://edinburghnlp.inf.ed.ac.uk/) under the supervision of [Mirella Lapata](http://homepages.inf.ed.ac.uk/mlap/index.php) and [Frank Keller](http://homepages.inf.ed.ac.uk/keller/). I am interested in  language grounding and multimodal NLP, representation learning, self-supervised learning, graph structures/graph neural networks (GNNs), latent variable models, summarization and memory-augmented language modeling. My PhD thesis focuses on structure-aware movie understanding and summarization. 
+I am a final year PhD student at the [School of Informatics, University of Edinburgh](https://www.ed.ac.uk/informatics/) and member of [EdinburghNLP](https://edinburghnlp.inf.ed.ac.uk/) under the supervision of [Mirella Lapata](http://homepages.inf.ed.ac.uk/mlap/index.php) and [Frank Keller](http://homepages.inf.ed.ac.uk/keller/). 
+
+I am interested in  language grounding and multimodal NLP, representation learning, self-supervised learning, graph structures/graph neural networks, latent variable models, summarization and memory-augmented language modeling. My PhD thesis focuses on structure-aware movie understanding and summarization. 
 
 Before that, I completed my diploma (combined BEng and MEng) at the [National Technical University of Athens](https://www.ntua.gr/en/) in Athens, Greece, department of [Electrical and Computer Engineering](https://www.ece.ntua.gr/en).
 
