@@ -21,6 +21,12 @@ author_profile: true
 
 <ul class="sparse-list">
         <li>
+          <b>Film Trailer Generation via Task Decomposition</b> <br/>
+          <u>Pinelopi Papalampidi</u>, Frank Keller, and Mirella Lapata. <br/>
+          Preprint.<br/>
+          [<a href="https://arxiv.org/pdf/2111.08774.pdf" class="link-in-list">paper</a>]
+        </li>
+        <li>
           <b>Movie Summarization via Sparse Graph Construction</b> <br/>
           <u>Pinelopi Papalampidi</u>, Frank Keller, and Mirella Lapata. <br/>
           AAAI 2021.<br/>
