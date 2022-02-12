@@ -21,9 +21,15 @@ author_profile: true
 
 <ul class="sparse-list">
         <li>
+          <b>Towards Coherent and Consistent Use of Entities in Narrative Generation</b> <br/>
+          <u>Pinelopi Papalampidi</u>, Kris Cao, and Tomas Kocisky. <br/>
+          Preprint, 2022.<br/>
+          [<a href="https://arxiv.org/pdf/2202.01709.pdf" class="link-in-list">paper</a>]
+        </li>
+        <li>
           <b>Film Trailer Generation via Task Decomposition</b> <br/>
           <u>Pinelopi Papalampidi</u>, Frank Keller, and Mirella Lapata. <br/>
-          Preprint.<br/>
+          Preprint, 2021.<br/>
           [<a href="https://arxiv.org/pdf/2111.08774.pdf" class="link-in-list">paper</a>]
         </li>
         <li>
