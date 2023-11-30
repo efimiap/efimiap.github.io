@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Pinelopi (Nelly) Papalampidi"
+title: "Efimia Panagiotaki"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,13 +8,14 @@ redirect_from:
   - /about.html
 ---
 
-I am a final year PhD student at the [School of Informatics, University of Edinburgh](https://www.ed.ac.uk/informatics/) and member of [EdinburghNLP](https://edinburghnlp.inf.ed.ac.uk/) under the supervision of [Mirella Lapata](http://homepages.inf.ed.ac.uk/mlap/index.php) and [Frank Keller](http://homepages.inf.ed.ac.uk/keller/). 
+I am currently a DPhil (PhD) student at the [Cognitive Robotics Group](https://ori.ox.ac.uk/labs/cognitive-robotics-group/) of the [Oxford Robotics Institute](https://ori.ox.ac.uk/), [University of Oxford](https://www.ox.ac.uk/), supervised by [Lars Kunze](https://scholar.google.co.uk/citations?user=TLC0azYAAAAJ&hl=en). My DPhil is funded by [Google DeepMind](https://deepmind.google/) through the [Department of Engineering Science](https://eng.ox.ac.uk/). 
 
-I am interested in  language grounding and multimodal NLP, representation learning, self-supervised learning, graph structures/graph neural networks, latent variable models, summarization and memory-augmented language modeling. My PhD thesis focuses on structure-aware movie understanding and summarization. 
+Before starting my DPhil I was working as Lead Self-Driving Software Engineer (June 2020-October 2021) and Software Engineer (June 2018-2020) at [StreetDrone Ltd](https://www.streetdrone.com/). I also worked as Data Processing Engineer at [Williams Racing](https://www.williamsf1.com/), [Formula 1](https://www.formula1.com/) team.
 
-Before that, I completed my diploma (combined BEng and MEng) at the [National Technical University of Athens](https://www.ntua.gr/en/) in Athens, Greece, department of [Electrical and Computer Engineering](https://www.ece.ntua.gr/en).
+I finished my diploma (5-years Integrated MEng degree) in 2017 at the [National Technical University of Athens](https://www.ntua.gr/en/) in Athens, Greece, department of [Electrical and Computer Engineering](https://www.ece.ntua.gr/en). During my studies I spent 8 months at [ETH Zürich](https://ethz.ch/en.html) conducting my master thesis at the [Computer Vision Lab](https://vision.ee.ethz.ch/) under the supervision of [Prof Luc Van Gool](https://scholar.google.co.uk/citations?user=TwMib_QAAAAJ&hl=en) and [Dr Dengxin Dai](https://scholar.google.co.uk/citations?user=T51W57YAAAAJ&hl=en), working at the [AMZ Driverless Formula Student Team](https://www.amzracing.ch/en).
 
-Recently, I also interned with the Language team at [DeepMind](https://deepmind.com/) with [Tomas Kocisky](http://www.tomas.kocisky.eu/) and [Kris Cao](https://scholar.google.com/citations?user=_KBP8ZgAAAAJ&hl=en), and with the Computer Vision team at [MetaAI](https://ai.facebook.com/) with [Marcus Rohrbach](https://rohrbach.vision/).
+Inspired by the significant unknowns of real-world robot deployment, I am investigating the topics of scene understanding and situational awareness for ground robotics applications. I am interested in 3D spatial robotic perception, multimodal semantic localisation, representation learning, scene understanding, graph structures/graph neural networks, foundation models, neural execution of graph algorithms, learning by abstraction, and explainable AI.
 
-I will soon finish my PhD and be on the job market!
+Always happy to connect and start new collaborations!
+
 
