@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Pinelopi Papalampidi"
+title                    : "Efimia Panagiotaki"
 title_separator          : "-"
-name                     : &name "Pinelopi Papalampidi"
-description              : &description "PhD student in School of Informatics, University of Edinburgh"
-url                      : https://ppapalampidi.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Efimia Panagiotaki"
+description              : &description "DPhil (PhD) student at the Cognitive Robotics Group, Oxford Robotics Institute, University of Oxford"
+url                      : https://efimiap.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "ppapalampidi.github.io"
+repository               : "efimiap.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -80,13 +80,13 @@ analytics:
 
 # Site Author
 author:
-  name             : "Pinelopi Papalampidi"
+  name             : "Efimia Panagiotaki"
   avatar           : "profile.png"
-  bio              : "PhD student in School of Informatics, University of Edinburgh"
-  location         : "Edinburgh, UK"
+  bio              : "DPhil (PhD) student at the Cognitive Robotics Group, Oxford Robotics Institute, University of Oxford. Google DeepMind Engineering Science Research Scholar"
+  location         : "Oxford, UK"
   employer         :
-  googlescholar    : 
-  email            : "p.papalampidi@sms.ed.ac.uk"
+  googlescholar    : "Efimia Panagiotaki"
+  email            : "efimia@robots.ox.ac.uk"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -95,19 +95,19 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "ppapalampidi"
+  github           : "efimiap"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : https://www.linkedin.com/in/efimia-panagiotaki-9866b9144/
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "pinelopip3"
+  twitter          : 
   vine             :
   weibo            :
   xing             :
