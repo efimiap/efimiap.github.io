@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am currently a DPhil (PhD) student at the [Cognitive Robotics Group](https://ori.ox.ac.uk/labs/cognitive-robotics-group/) of the [Oxford Robotics Institute](https://ori.ox.ac.uk/), [University of Oxford](https://www.ox.ac.uk/), supervised by [Lars Kunze](https://scholar.google.co.uk/citations?user=TLC0azYAAAAJ&hl=en). My DPhil is funded by [Google DeepMind](https://deepmind.google/) through the [Department of Engineering Science](https://eng.ox.ac.uk/). 
+I am currently a DPhil (PhD) student at the [Cognitive Robotics Group](https://ori.ox.ac.uk/labs/cognitive-robotics-group/) of the [Oxford Robotics Institute](https://ori.ox.ac.uk/), [University of Oxford](https://www.ox.ac.uk/), supervised by [Dr Lars Kunze](https://scholar.google.co.uk/citations?user=TLC0azYAAAAJ&hl=en). My DPhil is funded by [Google DeepMind](https://deepmind.google/) through the [Department of Engineering Science](https://eng.ox.ac.uk/). 
 
 Before starting my DPhil I was working as Lead Self-Driving Software Engineer (June 2020-October 2021) and Software Engineer (June 2018-2020) at [StreetDrone Ltd](https://www.streetdrone.com/). I also worked as Data Processing Engineer at [Williams Racing](https://www.williamsf1.com/), [Formula 1](https://www.formula1.com/) team.
 
