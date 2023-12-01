@@ -85,7 +85,7 @@ author:
   bio              : "DPhil (PhD) student at the Cognitive Robotics Group, Oxford Robotics Institute, University of Oxford. Google DeepMind Engineering Science Research Scholar"
   location         : "Oxford, UK"
   employer         :
-  googlescholar    : https://scholar.google.com/citations?user=f3wO9MYAAAAJ&hl=en&oi=sra
+  googlescholar    : "https://scholar.google.com/citations?user=f3wO9MYAAAAJ&hl=en&oi=sra"
   email            : "efimia@robots.ox.ac.uk"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -101,7 +101,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "efimia-panagiotaki-9866b9144"
+  linkedin         : "efimia-panagiotaki"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
@@ -213,10 +213,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
+  # _projects
   - scope:
       path: ""
-      type: teaching
+      type: projects
     values:
       layout: single
       author_profile: true
