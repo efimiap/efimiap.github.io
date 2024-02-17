@@ -22,7 +22,7 @@ author_profile: true
 <ul class="sparse-list">
         <li>
           <b>CC-SGG: Corner Case Scenario Generation using Learned Scene Graphs</b> <br/>
-          George Drayson*, <u>Efimia Panagiotaki*</u>, Daniel Omeiza, and Lars Kunze. Submitted 2023.<br/>
+          George Drayson*, <u>Efimia Panagiotaki*</u>, Daniel Omeiza, and Lars Kunze. Equal contribution and alphabetically listed. IEEE ICRA 2024.<br/>
           [<a href="https://arxiv.org/abs/2309.09844" class="link-in-list">paper</a>]
         </li>
         <li>

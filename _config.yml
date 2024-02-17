@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Efimia Panagiotaki"
 title_separator          : "-"
 name                     : &name "Efimia Panagiotaki"
-description              : &description "DPhil (PhD) student at the Cognitive Robotics Group, Oxford Robotics Institute, University of Oxford"
+description              : &description "DPhil (PhD) student at the Cognitive Robotics Group and Mobile Robotics Group, Oxford Robotics Institute, University of Oxford"
 url                      : https://efimiap.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "efimiap.github.io"
@@ -81,8 +81,8 @@ analytics:
 # Site Author
 author:
   name             : "Efimia Panagiotaki"
-  avatar           : "profile.png"
-  bio              : "DPhil (PhD) student at the Cognitive Robotics Group, Oxford Robotics Institute, University of Oxford | Google DeepMind Engineering Science Research Scholar"
+  avatar           : "profile.jpg"
+  bio              : "DPhil (PhD) student at the Cognitive Robotics Group and Mobile Robotics Group, Oxford Robotics Institute, University of Oxford | Google DeepMind Engineering Science Research Scholar"
   location         : "Oxford, UK"
   employer         :
   googlescholar    : "https://scholar.google.com/citations?user=f3wO9MYAAAAJ&hl=en&oi=sra"
