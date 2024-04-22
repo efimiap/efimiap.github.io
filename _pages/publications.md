@@ -29,7 +29,7 @@ author_profile: true
         <li>
           <b>OORD: The Oxford Offroad Radar Dataset</b> <br/>
           Matthew Gadd, Daniele De Martini, Oliver Bartlett, Paul Murcutt, Matt Towlson, Matthew Widojo, Valentina Muşat, Luke Robinson, <u>Efimia Panagiotaki</u>, Georgi Pramatarov, Marc Alexander Kühn, Letizia Marchegiani, Paul Newman, and Lars Kunze. <br/>
-          [<a href="https://arxiv.org/abs/2403.02845f" class="link-in-list">paper</a>]
+          [<a href="https://arxiv.org/abs/2403.02845" class="link-in-list">paper</a>]
           [<a href="https://oxford-robotics-institute.github.io/oord-dataset/" class="link-in-list">project page</a>]
         </li>
         <li>
