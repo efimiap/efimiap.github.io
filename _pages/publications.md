@@ -20,6 +20,11 @@ author_profile: true
   You can also find my articles on my [Google Scholar](https://scholar.google.com/citations?user=f3wO9MYAAAAJ&hl=en&oi=sra) profile.
 
 <ul class="sparse-list">
+	<li>
+          <b>CERES: Critical-Event Reconstruction via Temporal Scene Graph Completion</b> <br/>
+          <u>Efimia Panagiotaki</u>, Georgi Pramatarov, Lars Kunze, and Daniele De Martini. <br/>
+          [under review]
+        </li>
         <li>
           <b>RobotCycle: Assessing Cycling Safety in Urban Environments</b> <br/>
           <u>Efimia Panagiotaki</u>, Tyler Reinmund, Stephan Mouton, Luke Pitt, Arundathi Shaji Shanthini, Wayne Tubby, Matthew Towlson, Samuel Sze, Brian Liu, Chris Prahacs, Daniele De Martini, and Lars Kunze. <br/>
