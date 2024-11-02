@@ -21,9 +21,14 @@ author_profile: true
 
 <ul class="sparse-list">
 	<li>
+          <b>NAR-*ICP: Neural Execution of Classical ICP-based Pointcloud Registration Algorithms</b> <br/>
+          <u>Efimia Panagiotaki</u>, Daniele De Martini, Lars Kunze, and Petar Veličković. <br/>
+          [<a href="https://arxiv.org/abs/2410.11031" class="link-in-list">paper</a>]
+        </li>
+	<li>
           <b>CERES: Critical-Event Reconstruction via Temporal Scene Graph Completion</b> <br/>
           <u>Efimia Panagiotaki</u>, Georgi Pramatarov, Lars Kunze, and Daniele De Martini. <br/>
-          [under review]
+          [<a href="https://arxiv.org/pdf/2410.13514" class="link-in-list">paper</a>]
         </li>
         <li>
           <b>RobotCycle: Assessing Cycling Safety in Urban Environments</b> <br/>
