@@ -6,6 +6,6 @@ author_profile: true
 
 ---
 ---
-Here you can find my up-to-date [*curriculum vitae*.](/files/CV.pdf)
+Here you can find my up-to-date [*curriculum vitae*.](/files/CV_Efimia_website.pdf)
 
 

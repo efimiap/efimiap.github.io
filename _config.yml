@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Efimia Panagiotaki"
+title                    : "Efimia"
 title_separator          : "-"
-name                     : &name "Efimia Panagiotaki"
+name                     : &name "Efimia"
 description              : &description "DPhil (PhD) student at MRG and CRG, ORI, University of Oxford"
 url                      : https://efimiap.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"

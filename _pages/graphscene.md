@@ -33,7 +33,7 @@ Oxford Robotics Institute, Department of Engineering Science<br/>University of O
 </div>
 
 
-**A tool to automatically generate diverse, safety-critical traffic scenarios *on-demand* in simulation for testing autonomous vehicles.**
+**A tool to automatically generate diverse, safety-critical traffic scenarios *on-demand* in simulation for autonomous vehicles testing.**
 {: style="background-color: #eedffdff; padding: 5px; border-radius: 8px; display: inline-block; margin-bottom: -2.2em;"}
 
 <div style="text-align: center; margin: 30px 0;">

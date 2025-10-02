@@ -2,6 +2,9 @@
 
 <!-- start custom head snippets -->
 
+<!-- WALL-E favicon -->
+<link rel="icon" type="image/jpeg" href="{{ base_path }}/images/walle_nobg.png">
+
 <link rel="apple-touch-icon" sizes="57x57" href="{{ base_path }}/images/apple-touch-icon-57x57.png?v=M44lzPylqQ">
 <link rel="apple-touch-icon" sizes="60x60" href="{{ base_path }}/images/apple-touch-icon-60x60.png?v=M44lzPylqQ">
 <link rel="apple-touch-icon" sizes="72x72" href="{{ base_path }}/images/apple-touch-icon-72x72.png?v=M44lzPylqQ">
@@ -37,19 +40,171 @@
 
 <!-- Custom CSS for styling -->
 <style>
-  /* Remove underlines from all links */
+  /* Remove underlines from ALL links first */
   a {
     text-decoration: none !important;
   }
   
-  /* Ensure links still have hover effects but no underlines */
-  a:hover {
+  /* Ensure buttons specifically have no underlines */
+  .btn,
+  .btn:hover,
+  .btn:visited,
+  .btn:focus,
+  .btn:active {
     text-decoration: none !important;
   }
   
-  /* Keep link colors but remove underlines */
-  a:visited {
+  /* Consistent styling for regular content links (not buttons or main navigation) */
+  .page__content a:not(.btn),
+  .author__bio a:not(.btn),
+  .research-section a:not(.btn),
+  .page__inner-wrap a:not(.btn),
+  .archive a:not(.btn),
+  p a:not(.btn) {
+    color: #0066CC !important;
     text-decoration: none !important;
+  }
+  
+  .page__content a:not(.btn):hover,
+  .author__bio a:not(.btn):hover,
+  .research-section a:not(.btn):hover,
+  .page__inner-wrap a:not(.btn):hover,
+  .archive a:not(.btn):hover,
+  p a:not(.btn):hover {
+    color: #0066CC !important;
+    text-decoration: none !important;
+  }
+  
+  .page__content a:not(.btn):visited,
+  .author__bio a:not(.btn):visited,
+  .research-section a:not(.btn):visited,
+  .page__inner-wrap a:not(.btn):visited,
+  .archive a:not(.btn):visited,
+  p a:not(.btn):visited {
+    color: #0066CC !important;
+    text-decoration: none !important;
+  }
+
+  /* Ensure main navigation menu stays gray/default */
+  .masthead a,
+  .greedy-nav a {
+    color: inherit !important;
+  }
+
+  /* Left sidebar background stripe */
+  .sidebar {
+    background: linear-gradient(to right, #f5f5f5 0%, #f5f5f5 100%) !important;
+  }
+
+  /* Author profile styling */
+  .author__avatar img {
+    box-shadow: 0 0px 0px rgba(0,0,0,0.1) !important;
+  }
+
+  .author__content {
+    background-color: #f5f5f5 !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+    margin-top: 10px !important;
+  }
+
+  /* Social media icons styling */
+  .author__urls {
+    background-color: #f5f5f5 !important;
+    padding: 10px !important;
+    border-radius: 8px !important;
+    margin-top: 10px !important;
+  }
+
+  /* Research section styling */
+  .research-section {
+    margin-top: 30px;
+  }
+
+  .research-project {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 0px;
+    border: 1px solid #ffffff;
+    background-color: #fafafa;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .research-project:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .project-image {
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+
+  .project-content {
+    flex: 1;
+  }
+
+  .project-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #002147;
+    font-size: 1.0em;
+  }
+
+  .project-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #333;
+    font-size: 0.85em;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 10px;
+  }
+
+  .project-links .btn {
+    padding: 6px 10px;
+    font-size: 0.75em;
+    text-decoration: none !important;
+  }
+
+  .btn--primary {
+    background-color: #002147 !important;
+    color: white !important;
+  }
+
+  .btn--info {
+    background-color: #0066CC !important;
+    color: white !important;
+  }
+
+  /* Ensure all button text is white */
+  .btn,
+  .btn:hover,
+  .btn:visited,
+  .btn:focus,
+  .btn:active {
+    color: white !important;
+  }
+
+  .btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+  }
+
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .research-project {
+      flex-direction: column;
+    }
+    
+    .project-image {
+      margin-right: 0;
+      margin-bottom: 15px;
+      align-self: center;
+    }
   }
 </style>
 
