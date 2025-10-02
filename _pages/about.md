@@ -10,11 +10,11 @@ redirect_from:
 
 I am a final year DPhil (PhD) student at [MRG](https://ori.ox.ac.uk/labs/mobile-robotics-group/) and [CRG](https://ori.ox.ac.uk/labs/cognitive-robotics-group/) at the [Oxford Robotics Institute](https://ori.ox.ac.uk/), University of Oxford, supervised by [Daniele De Martini](https://scholar.google.com/citations?user=F7QcGh0AAAAJ&hl=en), [Paul Newman](https://scholar.google.com/citations?user=BtO5fTUAAAAJ&hl=en), and [Lars Kunze](https://scholar.google.co.uk/citations?user=TLC0azYAAAAJ&hl=en). For my studies, I have been awarded the Oxford - Google DeepMind research scholarship. 
 
-My research focuses on introspective robot learning and neurosymbolic AI, with work on graph learning, scene understanding, neural algorithmic reasoning, semantic localisation, and explainability.
-
 Currently, I am also working part-time at [OXA](https://oxa.tech/) as Senior ML Engineer, at the Office of the CTO. Before starting my DPhil, I was working as Lead Self-Driving Software Engineer at [StreetDrone](https://www.streetdrone.com/) (acquired by OXA) and worked as Data Engineer at [Williams Racing Formula 1](https://www.williamsf1.com/).
 
 I finished my MEng in 2017 at [NTUA](https://www.ntua.gr/en/), Greece, Department of [Electrical and Computer Engineering](https://www.ece.ntua.gr/en). During my studies, I spent time at [ETH Zürich](https://ethz.ch/en.html) conducting my master's thesis under the supervision of [Prof Luc Van Gool](https://scholar.google.co.uk/citations?user=TwMib_QAAAAJ&hl=en) and [Dr Dengxin Dai](https://scholar.google.co.uk/citations?user=T51W57YAAAAJ&hl=en), working with [AMZ Driverless](https://www.amzracing.ch/en).
+
+My research focuses on introspective robot learning and neurosymbolic AI, with work on graph learning, scene understanding, neural algorithmic reasoning, semantic localisation, and explainability.
 
 
 
